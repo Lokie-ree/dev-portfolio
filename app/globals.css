@@ -19,3 +19,21 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .nav-container {
+    @apply z-50 fixed flex justify-center w-full text-white font-bold;
+  }
+
+  .nav-desktop_menu {
+    @apply border border-white/20 mt-8 backdrop-blur-3xl rounded-3xl hidden md:flex items-center justify-center p-2 max-w-[400px] mx-auto;
+  }
+
+  .nav-desktop-links_li {
+    @apply transform hover:text-white/50 transition-all duration-300 ease-in-out;
+  }
+
+  .nav-toggle_btn {
+    @apply md:hidden absolute top-5 right-14 border rounded z-50 text-white/70 border-white/70 p-2;
+  }
+}
