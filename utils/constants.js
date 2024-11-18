@@ -1,4 +1,11 @@
-import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa6";
+import {
+  FaReact,
+  FaNodeJs,
+  FaSquareGithub,
+  FaSquareFacebook,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiSanity } from "react-icons/si";
 import {
@@ -10,7 +17,7 @@ import {
   FaBusinessTime,
 } from "react-icons/fa";
 
-export const TOP_COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+export const TOP_COLORS = ["#30A2F2", "#1E67C6", "#076AF5", "#0F39F5"];
 
 export const navLinks = [
   { title: "About", path: "#about" },
@@ -137,5 +144,19 @@ export const services = [
     id: "06",
     title: "Social Media Management",
     description: "Managing your social media channels to build brand awareness",
+  },
+];
+
+export const socialButtons = [
+  { id: 1, icon: FaSquareGithub, href: "https://github.com/Lokie-ree" },
+  {
+    id: 2,
+    icon: FaSquareFacebook,
+    href: "https://www.facebook.com/randall.lapoint.7/",
+  },
+  {
+    id: 3,
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/in/randall-lapoint-a8a72b289/",
   },
 ];

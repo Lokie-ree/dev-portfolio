@@ -1,84 +1,64 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { MdMenu, MdClose } from "react-icons/md";
-import { TOP_COLORS } from "@/utils/constants";
 import { navLinks } from "@/utils/constants";
-import {
-  motion,
-  useMotionValue,
-  useMotionTemplate,
-  animate,
-} from "framer-motion";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
-  const color = useMotionValue(TOP_COLORS[0]);
-
-  useEffect(() => {
-    animate(color, TOP_COLORS, {
-      ease: "easeInOut",
-      duration: 10,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  }, []);
-
-  const border = useMotionTemplate`1px solid ${color}`;
-
-  const toggleNav = () => {
-    setNav(!nav);
-  };
-
-  const closeNav = () => {
-    setNav(false);
-  };
+  const toggleNav = () => setNav((prev) => !prev);
+  const closeNav = () => setNav(false);
 
   return (
-    <div className="nav-container">
+    <nav className="nav-container">
+      {/* Desktop Navigation */}
       <div className="nav-desktop_menu ">
-        <motion.ul
-          className="flex flex-row p-2 space-x-8 rounded-full"
-          style={{ border }}
-        >
+        <ul className="flex space-x-10">
           {navLinks.map((link, index) => (
-            <li key={index} className="nav-desktop-links_li rounded-full p-2">
+            <li
+              key={index}
+              className="nav-desktop-links_li text-xl  hover:text-blue-500 hover:scale-125"
+            >
               <Link href={link.path}>{link.title}</Link>
-            </li>
-          ))}
-        </motion.ul>
-      </div>
-      <motion.div
-        onClick={toggleNav}
-        className="nav-toggle_btn border-2"
-        style={{ border }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        {nav ? <MdClose size={30} /> : <MdMenu size={30} />}
-      </motion.div>
-      <div
-        className={`fixed left-0 top-0 w-full h-full bg-black/90 transform transition-transform duration-300 ${
-          nav ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <ul className="flex flex-col items-center justify-center space-y-8 h-full">
-          {navLinks.map((link, index) => (
-            <li key={index}>
-              <Link
-                href={link.path}
-                onClick={closeNav}
-                className="text-3xl hover:text-5xl hover:font-bold hover:text-blue-500"
-              >
-                {link.title}
-              </Link>
             </li>
           ))}
         </ul>
       </div>
-    </div>
+      {/* Mobile Navigation Toggle */}
+      <div
+        onClick={toggleNav}
+        aria-expanded={nav}
+        aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
+        className="nav-toggle_btn hover:border-blue-300 hover:text-blue-500 hover:scale-125"
+      >
+        {nav ? <MdClose size={24} /> : <MdMenu size={24} />}
+      </div>
+      {/* Mobile Navigation */}
+      {nav && (
+        <motion.div
+          className={`fixed left-0 top-0 w-full h-full bg-black/90 backdrop-blur-3xl flex flex-col justify-center items-center transform transition-transform duration-300 ${
+            nav ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <ul className="space-y-6 flex flex-col justify-center items-center text-2xl text-gray-300">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  href={link.path}
+                  onClick={closeNav}
+                  className="hover:text-3xl hover:scale-110 transition-transform duration-200 hover:text-blue-500"
+                >
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      )}
+    </nav>
   );
 };
 

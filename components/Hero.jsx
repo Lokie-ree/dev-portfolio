@@ -8,12 +8,7 @@ import {
   motion,
   animate,
 } from "framer-motion";
-import {
-  TOP_COLORS,
-  backgroundImage,
-  border,
-  boxShadow,
-} from "@/utils/constants";
+import { TOP_COLORS } from "@/utils/constants";
 
 const Hero = () => {
   const color = useMotionValue(TOP_COLORS[0]);
@@ -27,7 +22,7 @@ const Hero = () => {
     });
   }, []);
 
-  const backgroundImage = useMotionTemplate`radial-gradient(150% 150% at 50% 0%, #000 50%, ${color})`;
+  const backgroundImage = useMotionTemplate`radial-gradient(170% 170% at 50% 0%, #000 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
@@ -51,7 +46,7 @@ const Hero = () => {
         </p>
         <div className="flex justify-center items-center gap-6">
           <motion.button
-            whileHover={{ scale: 1.015 }}
+            whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.985 }}
             className="hero-motion_btn"
             style={{
@@ -66,7 +61,7 @@ const Hero = () => {
               border,
               boxShadow,
             }}
-            whileHover={{ scale: 1.015 }}
+            whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.985 }}
             className="hero-motion_btn"
           >
