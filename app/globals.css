@@ -26,7 +26,7 @@ body {
   }
 
   .nav-desktop_menu {
-    @apply border border-white/20 mt-8 backdrop-blur-3xl rounded-3xl hidden md:flex items-center justify-center p-2 max-w-[400px] mx-auto;
+    @apply mt-8 backdrop-blur-3xl rounded-3xl hidden md:flex items-center justify-center p-2 max-w-[400px] mx-auto;
   }
 
   .nav-desktop-links_li {
@@ -34,6 +34,38 @@ body {
   }
 
   .nav-toggle_btn {
-    @apply md:hidden absolute top-5 right-14 border rounded z-50 text-white/70 border-white/70 p-2;
+    @apply md:hidden absolute top-5 right-14 border rounded-full z-50 text-white/70 border-white/70 p-2;
+  }
+
+  .hero-motion_section {
+    @apply relative grid min-h-screen place-content-center overflow-hidden px-4 py-24 text-gray-200;
+  }
+
+  .hero-container {
+    @apply z-10 flex flex-col items-center;
+  }
+
+  .hero-span {
+    @apply mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm;
+  }
+
+  .hero-lead {
+    @apply text-white/40 text-3xl md:text-5xl font-black;
+  }
+
+  .hero-name {
+    @apply max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text font-black leading-tight text-transparent text-3xl md:text-5xl;
+  }
+
+  .hero-testimonial_div {
+    @apply flex bg-white/10 shadow-xl p-3 rounded-3xl justify-center items-center space-x-2 mb-3;
+  }
+
+  .hero-motion_btn {
+    @apply flex w-fit items-center gap-2 rounded-full px-4 py-2;
+  }
+
+  .glass {
+    @apply bg-gradient-to-br from-white/10 to-transparent backdrop-blur-lg border border-white/20 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.37)];
   }
 }

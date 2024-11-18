@@ -2,12 +2,21 @@ import {
   Contact,
   Hero,
   KeyMetrics,
-  LogoAnimation,
   Portfolio,
   Services,
   Stack,
 } from "@/components";
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      {" "}
+      <Hero />
+      <Stack />
+      <Portfolio />
+      <KeyMetrics />
+      <Services />
+      <Contact />
+    </>
+  );
 }
