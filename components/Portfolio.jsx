@@ -27,10 +27,10 @@ const Portfolio = () => {
   const backgroundImage = useMotionTemplate`radial-gradient(165% 165% at 50% 0%, #000 50%, ${color})`;
 
   return (
-    <section id="portfolio" className="py-20 text-white">
+    <section id="portfolio" className="py-20 text-gray-200">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-5xl font-bold mb-10">
-          Selected <span className="text-blue-500">Projects</span>
+          Selected <span className="text-blue-400">Projects</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
@@ -50,7 +50,7 @@ const Portfolio = () => {
               </figure>
               {/* Project Details */}
               <motion.div className="card-body" style={{ backgroundImage }}>
-                <h2 className="card-title text-blue-500">{project.title}</h2>
+                <h2 className="card-title text-gray-300">{project.title}</h2>
                 <p className="mb-4">{project.description}</p>
                 <div className="flex justify-center">
                   <Link

@@ -27,12 +27,42 @@ export const navLinks = [
 ];
 
 export const stackItems = [
-  { id: 1, name: "Next.js", icon: RiNextjsLine, color: "#000000" },
-  { id: 2, name: "React", icon: FaReact, color: "#61DAFB" },
-  { id: 3, name: "Node.js", icon: FaNodeJs, color: "#339933" },
-  { id: 4, name: "Sanity", icon: SiSanity, color: "#F77769" },
-  { id: 5, name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#0e8ee9" },
-  { id: 6, name: "Github", icon: FaGithub, color: "#FFFFFF" },
+  {
+    id: 1,
+    name: "Next.js",
+    icon: RiNextjsLine,
+    color: "#000000",
+  },
+  {
+    id: 2,
+    name: "React",
+    icon: FaReact,
+    color: "#61DAFB",
+  },
+  {
+    id: 3,
+    name: "Node.js",
+    icon: FaNodeJs,
+    color: "#339933",
+  },
+  {
+    id: 4,
+    name: "Sanity",
+    icon: SiSanity,
+    color: "#F77769",
+  },
+  {
+    id: 5,
+    name: "Tailwind CSS",
+    icon: RiTailwindCssFill,
+    color: "#0e8ee9",
+  },
+  {
+    id: 6,
+    name: "Github",
+    icon: FaGithub,
+    color: "#000000",
+  },
 ];
 
 export const industryLogos = [

@@ -15,7 +15,7 @@ const KeyMetrics = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8 }}
-      className="container mx-auto px-4 py-32 text-white"
+      className="container mx-auto px-4 py-32 text-gray-200"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,6 @@ const KeyMetrics = () => {
                 delay: 0.8 + index * 0.1,
                 duration: 0.4,
               }}
-              className="text-gray-400"
             >
               {metric.description}
             </motion.p>

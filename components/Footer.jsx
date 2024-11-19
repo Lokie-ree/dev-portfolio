@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center text-gray-200 p-4">
+    <footer className="footer footer-center text-gray-300 p-4">
       <aside className="grid-flow-col items-center">
         <p>Copyright {new Date().getFullYear()} - All rights reserved</p>
       </aside>

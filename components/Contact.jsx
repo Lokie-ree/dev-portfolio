@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-32 text-white max-w-[1200px] mx-auto p-4"
+      className="py-32 text-gray-300 max-w-[1200px] mx-auto p-4"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-6xl font-bold text-gray-300"
+            className="text-6xl font-bold"
           >
             Get in <span className="text-blue-400">touch</span>
           </motion.h2>
@@ -34,24 +34,24 @@ const Contact = () => {
             className="glass p-8 rounded-2xl space-y-8"
           >
             <div className="space-y-2">
-              <p className="text-lg text-gray-300">Phone</p>
+              <p className="text-lg">Phone</p>
               <a
                 href="tel:+9855189129"
                 className="text-2xl lg:text-4xl font-semibold hover:text-blue-400 transition duration-300 flex items-center gap-2"
               >
-                <span className="text-gray-500 mr-3">
+                <span className="mr-3">
                   <FaPhoneVolume className="text-blue-400" />
                 </span>
                 (985) 518 - 9129
               </a>
             </div>
             <div className="space-y-2">
-              <p className="text-lg text-gray-300">Email</p>
+              <p className="text-lg">Email</p>
               <a
                 href="mailto:rplapointjr@gmail.com"
                 className="text-2xl lg:text-4xl font-semibold hover:text-blue-400 transition duration-300 flex items-center gap-2"
               >
-                <span className="text-gray-500 mr-3">
+                <span className="mr-3">
                   <MdEmail className="text-blue-400" />
                 </span>
                 rplapointjr@gmail.com

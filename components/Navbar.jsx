@@ -32,7 +32,7 @@ const Navbar = () => {
         onClick={toggleNav}
         aria-expanded={nav}
         aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
-        className="nav-toggle_btn hover:border-blue-300 hover:text-blue-500 hover:scale-125"
+        className="nav-toggle_btn hover:border-blue-300 hover:text-blue-500 hover:scale-105 tranition-all duration-300"
       >
         {nav ? <MdClose size={24} /> : <MdMenu size={24} />}
       </div>
