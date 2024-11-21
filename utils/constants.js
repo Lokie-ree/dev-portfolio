@@ -5,25 +5,19 @@ import {
   FaSquareFacebook,
   FaLinkedin,
   FaGithub,
-  FaStripe,
 } from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiSanity,
   SiVite,
   SiSentry,
-  SiDaisyui,
+  SiVercel,
+  SiFirebase,
   SiFramer,
+  SiTypescript,
+  SiStripe,
 } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
-import {
-  FaHandsHelping,
-  FaGraduationCap,
-  FaStore,
-  FaShoppingCart,
-  FaCloud,
-  FaBusinessTime,
-} from "react-icons/fa";
 
 import { ICON_COLORS } from "./colors";
 
@@ -39,29 +33,29 @@ export const navLinks = [
 export const projects = [
   {
     id: 1,
-    title: "Buttercream Dream E-Commerce",
+    title: "E-Commerce",
     description:
-      "Full-fledged e-commerce website using Next.js, React, Sanity, and Stripe",
+      "A feature-rich e-commerce platform with dynamic cart functionality, product listing, and detail pages powered by Sanity CMS. Integrated with Stripe for secure and seamless payment processing.",
     image: "/assets/ecommerce1.png",
     link: "https://buttercream-dream.vercel.app/",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
       { name: "React", icon: FaReact, color: ICON_COLORS.React },
       { name: "Sanity", icon: SiSanity, color: ICON_COLORS.Sanity },
-      { name: "Stripe", icon: FaStripe, color: ICON_COLORS.Stripe },
       {
         name: "Tailwind",
         icon: RiTailwindCssFill,
         color: ICON_COLORS.Tailwind,
       },
-      { name: "DaisyUI", icon: SiDaisyui, color: ICON_COLORS.DaisyUI },
+      { name: "Stripe", icon: SiStripe, color: ICON_COLORS.Stripe },
+      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
     ],
   },
   {
     id: 2,
     title: "iPhone 15 Clone",
     description:
-      "Clone of the iPhone 15 website using Next.js, React, and GSAP/Three.js for interactive 3D models",
+      "A visually stunning clone of the iPhone 15 website using GSAP and Three.js for interactive 3D animations and graphics, delivering a sleek and immersive user experience.",
     image: "/assets/iphone1.png",
     link: "https://iphone-website-pi.vercel.app/",
     techStack: [
@@ -74,13 +68,14 @@ export const projects = [
         color: ICON_COLORS.Tailwind,
       },
       { name: "Sentry", icon: SiSentry, color: ICON_COLORS.Sentry },
+      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
     ],
   },
   {
     id: 3,
     title: "Kittenz",
     description:
-      "Fetches random photos of cats from an API and includes a matching game",
+      "A fun and interactive web app that fetches random kitten photos from the CatAPI. Includes a dynamic matching game to test your memory and love for kittens.",
     image: "/assets/kittenz1.png",
     link: "https://kittenz-theta.vercel.app/",
     techStack: [
@@ -91,14 +86,14 @@ export const projects = [
         icon: RiTailwindCssFill,
         color: ICON_COLORS.Tailwind,
       },
-      { name: "DaisyUI", icon: SiDaisyui, color: ICON_COLORS.DaisyUI },
+      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
     ],
   },
   {
     id: 4,
-    title: "Task Management App",
+    title: "Taskify",
     description:
-      "Fully functional task management app with a theme switcher and functionality to add, edit, or remove tasks",
+      "A versatile task management app with smooth animations powered by Framer Motion. Features include task creation, editing, and deletion, with a focus on usability and innovation.",
     image: "/assets/todo1.png",
     link: "https://react-todo-beta-three.vercel.app/",
     techStack: [
@@ -109,18 +104,19 @@ export const projects = [
         icon: RiTailwindCssFill,
         color: ICON_COLORS.Tailwind,
       },
-      { name: "DaisyUI", icon: SiDaisyui, color: ICON_COLORS.DaisyUI },
       {
         name: "Framer Motion",
         icon: SiFramer,
         color: ICON_COLORS.FramerMotion,
       },
+      { name: "Firebase", icon: SiFirebase, color: ICON_COLORS.Firebase },
     ],
   },
   {
     id: 5,
-    title: "Dev Portfolio",
-    description: "This is my personal portfolio",
+    title: "Personal Portfolio",
+    description:
+      "A modern developer portfolio built with Next.js 15, React, Tailwind CSS, DaisyUI, and Framer Motion. Showcases projects and skills with sleek animations and a responsive design.",
     image: "/assets/todo1.png",
     link: "https://react-todo-beta-three.vercel.app/",
     techStack: [
@@ -131,12 +127,35 @@ export const projects = [
         icon: RiTailwindCssFill,
         color: ICON_COLORS.Tailwind,
       },
-      { name: "DaisyUI", icon: SiDaisyui, color: ICON_COLORS.DaisyUI },
       {
         name: "Framer Motion",
         icon: SiFramer,
         color: ICON_COLORS.FramerMotion,
       },
+      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
+    ],
+  },
+  {
+    id: 6,
+    title: "YC Directory",
+    description:
+      "A robust directory app allowing entrepreneurs to search for and explore popular startups. Includes features for user profile creation, startup submissions, and content management powered by Sanity CMS.",
+    image: "/assets/todo1.png",
+    link: "https://react-todo-beta-three.vercel.app/",
+    techStack: [
+      { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
+      { name: "React", icon: FaReact, color: ICON_COLORS.React },
+      {
+        name: "Tailwind",
+        icon: RiTailwindCssFill,
+        color: ICON_COLORS.Tailwind,
+      },
+      {
+        name: "Framer Motion",
+        icon: SiFramer,
+        color: ICON_COLORS.FramerMotion,
+      },
+      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
     ],
   },
 ];
@@ -146,47 +165,86 @@ export const stackItems = [
     id: 1,
     name: "Next.js",
     icon: RiNextjsLine,
-    color: "#000000",
+    color: ICON_COLORS.Next,
   },
   {
     id: 2,
     name: "React",
     icon: FaReact,
-    color: "#61DAFB",
+    color: ICON_COLORS.React,
   },
   {
     id: 3,
     name: "Node.js",
     icon: FaNodeJs,
-    color: "#339933",
+    color: ICON_COLORS.Node,
   },
   {
     id: 4,
     name: "Sanity",
     icon: SiSanity,
-    color: "#F77769",
+    color: ICON_COLORS.Sanity,
   },
   {
     id: 5,
     name: "Tailwind CSS",
     icon: RiTailwindCssFill,
-    color: "#0e8ee9",
+    color: ICON_COLORS.Tailwind,
   },
   {
     id: 6,
+    name: "TypeScript",
+    icon: SiTypescript,
+    color: ICON_COLORS.TypeScript,
+  },
+  {
+    id: 7,
     name: "Github",
     icon: FaGithub,
-    color: "#000000",
+    color: ICON_COLORS.GitHub,
   },
-];
-
-export const industryLogos = [
-  { title: "Non-Profits", icon: <FaHandsHelping size={40} /> },
-  { title: "Education", icon: <FaGraduationCap size={40} /> },
-  { title: "Businesses", icon: <FaStore size={40} /> },
-  { title: "E-Commerce", icon: <FaShoppingCart size={40} /> },
-  { title: "SaaS", icon: <FaCloud size={40} /> },
-  { title: "Entrepreneurs", icon: <FaBusinessTime size={40} /> },
+  {
+    id: 8,
+    name: "Vite",
+    icon: SiVite,
+    color: ICON_COLORS.Vite,
+  },
+  {
+    id: 9,
+    name: "Three.js",
+    icon: TbBrandThreejs,
+    color: ICON_COLORS.ThreeJS,
+  },
+  {
+    id: 10,
+    name: "Sentry",
+    icon: SiSentry,
+    color: ICON_COLORS.Sentry,
+  },
+  {
+    id: 11,
+    name: "Framer Motion",
+    icon: SiFramer,
+    color: ICON_COLORS.FramerMotion,
+  },
+  {
+    id: 12,
+    name: "Stripe",
+    icon: SiStripe,
+    color: ICON_COLORS.Stripe,
+  },
+  {
+    id: 13,
+    name: "Firebase",
+    icon: SiFirebase,
+    color: ICON_COLORS.Firebase,
+  },
+  {
+    id: 14,
+    name: "Vercel",
+    icon: SiVercel,
+    color: ICON_COLORS.Vercel,
+  },
 ];
 
 export const metrics = [

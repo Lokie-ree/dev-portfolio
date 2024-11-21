@@ -53,17 +53,17 @@ const Portfolio = () => {
 
               {/* Project Details */}
               <div className="card-body p-6">
-                <h2 className="card-title text-gray-300 text-xl sm:text-2xl font-bold mb-2">
+                <h2 className="card-title text-blue-300 text-xl sm:text-2xl font-bold mb-2">
                   {project.title}
                 </h2>
-                <p className="text-gray-300">{project.description}</p>
+                <p className="text-gray-300 font-thin">{project.description}</p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap justify-center gap-2">
+                <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, index) => (
                     <span
                       key={index}
-                      className=" flex items-center gap-2 px-2 py-2 text-md"
+                      className=" flex items-center gap-2 px-1 py-3 text-md"
                     >
                       <tech.icon
                         className="w-8 h-8"

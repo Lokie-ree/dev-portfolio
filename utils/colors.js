@@ -1,6 +1,6 @@
 export const ICON_COLORS = {
-  React: "#61DAFB",
-  Next: "#000000",
+  React: "#087EA4",
+  Next: "#FFFFFF",
   Node: "#339933",
   Tailwind: "#06B6D4",
   Sanity: "#F03E2F",
@@ -8,8 +8,9 @@ export const ICON_COLORS = {
   GitHub: "#FFFFFF",
   TypeScript: "#FFCA28",
   Vite: "#646CFF",
-  ThreeJS: "#000000",
+  ThreeJS: "#FFFFFF",
   Sentry: "#FB4226",
-  DaisyUI: "#5A4AD1",
+  Firebase: "#FFCA28",
+  Vercel: "#FFFFFF",
   FramerMotion: "#0055FF",
 };
