@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,7 +29,7 @@ body {
   }
 
   .nav-desktop_menu {
-    @apply mt-8 backdrop-blur-3xl rounded-3xl hidden md:flex items-center justify-center p-2 max-w-[400px] mx-auto;
+    @apply mt-8 backdrop-blur-3xl rounded-3xl hidden md:flex items-center justify-center p-4 max-w-[600px] mx-auto;
   }
 
   .nav-desktop-links_li {

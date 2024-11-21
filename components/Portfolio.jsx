@@ -1,71 +1,92 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  useMotionTemplate,
-  useMotionValue,
-  motion,
-  animate,
-} from "framer-motion";
-import { TOP_COLORS } from "@/utils/constants";
 import { projects } from "@/utils/constants";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
-  const color = useMotionValue(TOP_COLORS[0]);
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
-  useEffect(() => {
-    animate(color, TOP_COLORS, {
-      ease: "easeInOut",
-      duration: 5,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  }, []);
-
-  const backgroundImage = useMotionTemplate`radial-gradient(165% 165% at 50% 0%, #000 50%, ${color})`;
+  console.log(JSON.stringify(projects[0].techStack, null, 2));
 
   return (
-    <section id="portfolio" className="py-20 text-gray-200">
+    <section id="portfolio" className="py-16 text-gray-200 bg-gray-950">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-5xl font-bold mb-10">
+        <h2 className="text-4xl md:text-7xl font-bold py-4 text-center">
           Selected <span className="text-blue-400">Projects</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Grid Layout */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 p-2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project.id}
-              className="card bg-base-100 shadow-xl rounded-b-xl"
+              className="card bg-gray-700 shadow-xl rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300"
+              variants={cardVariants}
             >
               {/* Project Image */}
-              <figure className="h-80 overflow-hidden">
+              <figure className="h-100 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={400}
-                  height={224}
+                  height={300}
                   className="object-cover w-full h-full"
                 />
               </figure>
+
               {/* Project Details */}
-              <motion.div className="card-body" style={{ backgroundImage }}>
-                <h2 className="card-title text-gray-300">{project.title}</h2>
-                <p className="mb-4">{project.description}</p>
-                <div className="flex justify-center">
+              <div className="card-body p-6">
+                <h2 className="card-title text-gray-300 text-xl sm:text-2xl font-bold mb-2">
+                  {project.title}
+                </h2>
+                <p className="text-gray-300">{project.description}</p>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap justify-center gap-2">
+                  {project.techStack.map((tech, index) => (
+                    <span
+                      key={index}
+                      className=" flex items-center gap-2 px-2 py-2 text-md"
+                    >
+                      <tech.icon
+                        className="w-8 h-8"
+                        style={{ color: tech.color }}
+                      />
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex">
                   <Link
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary"
+                    className="btn btn-primary text-gray-800 w-full"
                   >
                     View Live Project
                   </Link>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
