@@ -23,6 +23,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body,
+html {
+  @apply overflow-x-hidden;
+}
+
 @layer utilities {
   .hover-color_scale {
     @apply hover:text-secondary hover:scale-125 transition-all duration-300;
@@ -45,7 +50,7 @@ body {
   }
 
   .nav-toggle_btn {
-    @apply md:hidden absolute top-6 right-6 border rounded-full z-50 text-gray-950 border-gray-950 bg-primary p-3;
+    @apply md:hidden absolute top-4 right-4 border rounded-full z-50 text-gray-950 border-gray-950 bg-primary p-4;
   }
 
   .hero-motion_section {
