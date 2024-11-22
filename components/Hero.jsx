@@ -60,26 +60,15 @@ const Hero = () => {
           Full-Stack Developer
         </p>
         <div className="flex justify-center items-center gap-6">
-          <motion.button
-            className="hero-motion_btn font-semibold text-gray-300 bg-gray-900"
-            style={{
-              border,
-            }}
-            {...buttonMotion}
+          <button
+            className="btn btn-primary hover-btn"
             aria-label="View my projects"
           >
             Projects
-          </motion.button>
-          <motion.button
-            className="hero-motion_btn font-semibold text-gray-300 bg-gray-900"
-            style={{
-              border,
-            }}
-            {...buttonMotion}
-            aria-label="Contact me"
-          >
+          </button>
+          <button className="btn btn-primary hover-btn" aria-label="Contact me">
             Contact
-          </motion.button>
+          </button>
         </div>
       </div>
     </motion.section>

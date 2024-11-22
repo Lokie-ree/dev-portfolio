@@ -12,17 +12,15 @@ const Portfolio = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  console.log(JSON.stringify(projects[0].techStack, null, 2));
-
   return (
     <section id="portfolio" className="py-16 text-gray-200 bg-gray-950">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl md:text-7xl font-bold py-4 text-center">
-          Selected <span className="text-blue-400">Projects</span>
+        <h2 className="text-5xl md:text-6xl text-gray-200 font-bold mb-8 text-center">
+          Projects
         </h2>
         {/* Grid Layout */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 p-2"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}

@@ -5,6 +5,9 @@ import {
   FaSquareFacebook,
   FaLinkedin,
   FaGithub,
+  FaCode,
+  FaDiagramProject,
+  FaRocket,
 } from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import {
@@ -16,6 +19,7 @@ import {
   SiFramer,
   SiTypescript,
   SiStripe,
+  SiGoogleanalytics,
 } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 
@@ -250,28 +254,39 @@ export const stackItems = [
 export const metrics = [
   {
     id: 1,
-    value: "8+",
-    label: "Technologies Used",
-    description: "Proficient in the latest JavaScript frameworks and libraries",
+    value: "16+",
+    title: "Technologies Explored",
+    description: "Proficient in modern frameworks and libraries.",
+    icon: FaCode,
   },
   {
     id: 2,
     value: "5+",
-    label: "Projects Completed",
-    description: "From small applications to complex web platforms",
+    title: "Projects Completed",
+    description: "From small applications to complex web platforms.",
+    icon: FaDiagramProject,
   },
   {
     id: 3,
     value: "99%",
-    label: "Code Quality",
+    title: "Code Quality",
     description:
-      "Committment to writing clean, efficient, and maintainable code",
+      "Commitment to writing clean, efficient, and maintainable code.",
+    icon: SiGoogleanalytics,
   },
   {
     id: 4,
     value: "250+",
-    label: "Commits on GitHub",
-    description: "Active contributor to personal and collaborative projects",
+    title: "Commits on GitHub",
+    description: "Active contributor to personal and collaborative projects.",
+    icon: FaGithub,
+  },
+  {
+    id: 5,
+    value: "300+",
+    title: "Hours of Learning",
+    description: "Dedicated to improving skills and mastering new tech tools.",
+    icon: FaRocket,
   },
 ];
 

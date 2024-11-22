@@ -2,75 +2,32 @@
 
 import React from "react";
 import { metrics } from "@/utils/constants";
-import { motion, useInView } from "framer-motion";
 
 const KeyMetrics = () => {
-  const ref = React.useRef(null);
-
-  const isInView = useInView(ref, { once: false });
-
   return (
-    <motion.section
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8 }}
-      className="container mx-auto px-4 py-32 text-gray-200"
-    >
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        className="text-6xl font-bold mb-12"
-      >
-        Key Metrics
-      </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {metrics.map((metric, index) => (
-          <motion.div
-            key={metric.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-            className="flex flex-col"
-          >
-            <motion.h3
-              initial={{ scale: 0.5 }}
-              animate={isInView ? { scale: 1 } : { scale: 0.5 }}
-              transition={{
-                delay: 0.6 + index * 0.1,
-                duration: 0.4,
-                type: "spring",
-              }}
-              className="text-5xl font-bold text-blue-400 mb-2"
-            >
-              {metric.value}
-            </motion.h3>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{
-                delay: 0.8 + index * 0.1,
-                duration: 0.4,
-              }}
-              className="text-xl font-semibold mb-2"
-            >
-              {metric.label}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{
-                delay: 0.8 + index * 0.1,
-                duration: 0.4,
-              }}
-            >
-              {metric.description}
-            </motion.p>
-          </motion.div>
-        ))}
+    <section className="py-16 bg-gray-800 text-gray-200">
+      <div className="container max-w-6xl mx-auto px-4">
+        <h2 className="text-5xl font-bold text-center mb-8">Key Metrics</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {metrics.map((metric) => (
+            <div key={metric.id} className="stat bg-gray-700 rounded-lg p-6">
+              <div className="flex items-center text-accent font-semibold gap-8 mb-4">
+                <span className="stat-value text-primary text-4xl sm:text-5xl">
+                  {metric.value}
+                </span>
+                <metric.icon className="w-8 h-8 sm:w-12 sm:h-12" />
+              </div>
+              <div className="stat-title text-2xl sm:text-3xl font-bold mb-2">
+                {metric.title}
+              </div>
+              <div className=" text-white text-md sm:text-lg">
+                {metric.description}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -24,8 +24,16 @@ body {
 }
 
 @layer utilities {
+  .hover-color_scale {
+    @apply hover:text-secondary hover:scale-125 transition-all duration-300;
+  }
+
+  .hover-btn {
+    @apply hover:text-secondary-content hover:bg-secondary hover:scale-125 transition-all duration-300 rounded-full;
+  }
+
   .nav-container {
-    @apply z-50 fixed flex justify-center w-full text-white font-bold;
+    @apply z-50 fixed flex justify-center w-full font-bold;
   }
 
   .nav-desktop_menu {
@@ -33,11 +41,11 @@ body {
   }
 
   .nav-desktop-links_li {
-    @apply transform hover:text-white/50 transition-all duration-300 ease-in-out;
+    @apply transform transition-all duration-300 ease-in-out;
   }
 
   .nav-toggle_btn {
-    @apply md:hidden absolute top-5 right-14 border rounded-full z-50 text-white/70 border-white/70 p-2;
+    @apply md:hidden absolute top-6 right-6 border rounded-full z-50 text-gray-950 border-gray-950 bg-primary p-3;
   }
 
   .hero-motion_section {
