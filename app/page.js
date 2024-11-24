@@ -12,9 +12,9 @@ export default function Home() {
     <>
       {" "}
       <Hero />
+      <KeyMetrics />
       <Stack />
       <Portfolio />
-      <KeyMetrics />
       <Services />
       <Contact />
     </>

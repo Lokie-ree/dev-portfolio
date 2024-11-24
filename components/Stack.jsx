@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Stack = () => {
   return (
-    <section className="py-16 bg-gray-800 text-gray-200">
+    <section id="stack" className="py-16 bg-gray-800 text-gray-200">
       <div className="max-w-[1200px] mx-auto px-4 text-center">
         <h2 className="text-5xl md:text-6xl text-gray-200 font-bold mb-8">
           Tech Stack

@@ -11,8 +11,14 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["Quicksand", "sans-serif"],
+        exo: ["Exo 2", "sans-serif"],
+      },
     },
   },
-  mode: "jit",
+  daisyui: {
+    themes: ["dark", "light"],
+  },
   plugins: [require("daisyui")],
 };

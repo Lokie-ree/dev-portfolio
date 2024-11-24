@@ -1,0 +1,5 @@
+Background: bg-base-100
+Card Background: bg-base-200
+Text: text-base-content
+Primary: text-primary
+Accent: text-accent

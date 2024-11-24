@@ -5,79 +5,14 @@
 * {
   margin: 0;
 }
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body,
 html {
-  @apply overflow-x-hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
-  .hover-color_scale {
-    @apply hover:text-secondary hover:scale-125 transition-all duration-300;
-  }
-
-  .hover-btn {
-    @apply hover:text-secondary-content hover:bg-secondary hover:scale-125 transition-all duration-300 rounded-full;
-  }
-
-  .nav-container {
-    @apply z-50 fixed flex justify-center w-full font-bold;
-  }
-
-  .nav-desktop_menu {
-    @apply mt-8 backdrop-blur-3xl rounded-3xl hidden md:flex items-center justify-center p-4 max-w-[600px] mx-auto;
-  }
-
-  .nav-desktop-links_li {
-    @apply transform transition-all duration-300 ease-in-out;
-  }
-
-  .nav-toggle_btn {
-    @apply md:hidden absolute top-4 right-4 border rounded-full z-50 text-gray-950 border-gray-950 bg-primary p-4;
-  }
-
-  .hero-motion_section {
-    @apply relative grid min-h-screen place-content-center overflow-hidden px-4 py-24 text-gray-200;
-  }
-
-  .hero-span {
-    @apply mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm;
-  }
-
-  .hero-name {
-    @apply max-w-3xl bg-gradient-to-br from-blue-50 to-blue-300 bg-clip-text font-black leading-tight text-transparent;
-  }
-
-  .hero-motion_btn {
-    @apply flex w-fit items-center gap-2 rounded-full px-5 py-3;
-  }
-
   .glass {
     @apply bg-gradient-to-br from-white/10 to-transparent backdrop-blur-lg border border-white/20 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.37)];
-  }
-
-  .text-gradient_light {
-    @apply bg-gradient-to-br from-blue-50 to-blue-300 bg-clip-text font-black leading-tight text-transparent;
-  }
-
-  .text-gradient_dark {
-    @apply bg-gradient-to-br from-blue-300 to-blue-600 bg-clip-text font-black leading-tight text-transparent;
   }
 }
