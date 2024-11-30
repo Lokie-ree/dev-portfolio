@@ -27,8 +27,13 @@ const ThemeController = () => {
         onChange={toggleTheme}
         checked={theme === "light"}
       />
-      <BiSun className="swap-off h-10 w-10 text-yellow-500" />
-      <BiMoon className="swap-on h-10 w-10 text-blue-500" />
+      <span className="swap-off">
+      <BiSun className="h-8 w-8 text-yellow-500 transition-transform duration-200 hover:scale-125 hover:rotate-12" />
+      </span>
+      <span className="swap-on">
+      <BiMoon className="h-8 w-8 text-purple-500 transition-transform duration-200 hover:scale-125 hover:-rotate-12" />
+
+      </span>
     </label>
   );
 };

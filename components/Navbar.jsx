@@ -6,6 +6,7 @@ import { MdMenu, MdClose } from "react-icons/md";
 import { navLinks, socialButtons } from "@/utils/constants";
 import { motion } from "framer-motion";
 import ThemeController from "./ThemeController";
+import SocialButtons from "./SocialButtons";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <li
               key={index}
-              className="transform transition-all duration-300 ease-in-out text-2xl hover-color_scale"
+              className="transform transition-all duration-300 ease-in-out text-2xl"
             >
               <Link href={link.path}>{link.title}</Link>
             </li>
@@ -36,18 +37,18 @@ const Navbar = () => {
         onClick={toggleNav}
         aria-expanded={nav}
         aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
-        className="md:hidden bg-primary text-primary-content absolute top-4 right-4 rounded-full z-50 p-4"
+        className="md:hidden border border-primary text-base-content absolute top-4 right-4 rounded-full z-50 p-4"
       >
         {nav ? <MdClose size={24} /> : <MdMenu size={24} />}
       </div>
       {/* Mobile Navigation */}
       {nav && (
         <motion.div
-          className={`fixed left-0 top-0 w-full h-full bg-neutral backdrop-blur-3xl flex flex-col justify-center items-center transform transition-transform duration-300 ${
+          className={`fixed left-0 top-0 w-full h-full bg-base-200 backdrop-blur-3xl flex flex-col justify-center items-center transform transition-transform duration-300 ${
             nav ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <ul className="space-y-6 flex flex-col justify-center items-center text-neutral-content text-2xl sm:text-3xl mb-6">
+          <ul className="space-y-6 flex flex-col justify-center items-center text-base-content text-2xl sm:text-3xl mb-6">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <Link
@@ -60,12 +61,11 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <nav className="grid grid-flow-row gap-4 mt-4">
-            {socialButtons.map((button) => (
-              <Link key={button.id} href={button.href} className="btn btn-primary">
-                <button.icon className="size-12" />
-              </Link>
-            ))}
+          <nav className="grid grid-flow-row gap-4">
+          <SocialButtons
+            buttons={socialButtons}
+            iconClass="w-10 h-10"
+          />
             <ThemeController />
           </nav>
         </motion.div>

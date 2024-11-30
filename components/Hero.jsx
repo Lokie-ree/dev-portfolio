@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { socialButtons } from "@/utils/constants";
+import SocialButtons from "./SocialButtons";
 
 const Hero = () => {
   return (
@@ -34,7 +35,7 @@ const Hero = () => {
         <div className="flex justify-center items-center gap-6">
           <Link href="#projects" passHref>
             <button
-              className="btn btn-accent hover:scale-105 transition-all duration-300 rounded-full"
+              className="btn btn-accent hover:scale-105 hover:bg-secondary transition-all duration-300 rounded-full"
               aria-label="View my projects"
             >
               Projects
@@ -42,7 +43,7 @@ const Hero = () => {
           </Link>
           <Link href="#contact" passHref>
             <button
-              className="btn btn-accent hover:scale-105 transition-all duration-300 rounded-full"
+              className="btn btn-accent hover:scale-105 hover:bg-secondary transition-all duration-300 rounded-full"
               aria-label="Contact me"
             >
               Contact
@@ -50,11 +51,10 @@ const Hero = () => {
           </Link>
         </div>
         <div className="mt-6">
-          {socialButtons.map((button) => (
-            <Link key={button.id} href={button.href} className="rounded-xl">
-              <button.icon className="btn size-16" />
-            </Link>
-          ))}
+          <SocialButtons
+            buttons={socialButtons}
+            iconClass="w-10 h-10"
+          />
         </div>
       </div>
     </section>
