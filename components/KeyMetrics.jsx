@@ -3,8 +3,8 @@ import { metrics } from "@/utils/constants";
 
 const KeyMetrics = () => {
   return (
-    <section className="text-base-content">
-      <div className="container max-w-6xl mx-auto px-4">
+    <section className="py-8 relative overflow-hidden px-2">
+      <div className="container max-w-[1200px] mx-auto px-4">
         <h2 className="text-5xl md:text-6xl text-primary font-exo font-bold text-center mb-8">
           Key Metrics
         </h2>
@@ -12,7 +12,7 @@ const KeyMetrics = () => {
           {metrics.map((metric) => (
             <div
               key={metric.id}
-              className="stat p-6 bg-white/30 rounded-3xl shadow-lg backdrop-blur-md hover:scale-105 transition-transform duration-300"
+              className="stat p-6 bg-white/30 rounded-2xl shadow-lg backdrop-blur-md hover:scale-105 transition-transform duration-300"
             >
               <div className="mb-4">
                 <span className="stat-value text-accent text-3xl sm:text-4xl">

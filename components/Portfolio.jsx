@@ -14,22 +14,20 @@ const Portfolio = () => {
 
   return (
     <section id="projects" className="py-16 text-base-content">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-5xl md:text-6xl font-bold text-primary text-center mb-12">
           Projects
         </h2>
         {/* Flexbox Layout */}
-        <div className="flex flex-wrap gap-6 justify-center p-4">
+        <div className="flex flex-wrap gap-6 justify-center">
           {projects.map((project) => (
             <div
               key={project.id}
-              className={`flex flex-col p-4 items-center border border-white/30 rounded-xl shadow-md transition-all duration-300 ${
-                activeCard === project.id ? "bg-base-200 p-6 w-full sm:w-[70%] lg:w-[50%]" : "w-full sm:max-w-lg"
-              }`}
+              className="flex flex-col items-center p-4 border bg-white/30 rounded-xl shadow-md w-full sm:w-[48%] lg:w-[30%] transition-transform duration-300 hover:scale-105"
               onClick={() => toggleCard(project.id)}
             >
               {/* Project Image */}
-              <div className="w-full h-60 overflow-hidden rounded-t-xl">
+              <div className="w-full h-52 overflow-hidden rounded-t-xl">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -40,16 +38,16 @@ const Portfolio = () => {
               </div>
               {/* Project Details */}
               <div className="flex flex-col items-center justify-center mt-4">
-                <h3 className="text-lg font-bold">{project.title}</h3>
+                <h3 className="text-lg font-bold mb-2">{project.title}</h3>
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 justify-center mt-2">
+                <div className="flex flex-wrap gap-2 justify-center">
                   {project.techStack.map((tech, index) => (
                     <span
                       key={index}
                       className="flex items-center gap-2 text-sm"
                     >
                       <tech.icon
-                        className="w-6 h-6"
+                        className="w-5 h-5"
                         style={{ color: tech.color }}
                       />
                     </span>
@@ -57,9 +55,9 @@ const Portfolio = () => {
                 </div>
               </div>
 
-              {/* Expandable Content */}
-              {activeCard === project.id && (
-                <div className="mt-4">
+              {/* Conditional Content */}
+             
+                <div className={`mt-4 md:block ${activeCard === project.id ? "block" : "hidden"}`}>
                   <p className="text-base-content mb-4">{project.description}</p>
                   <Link
                     href={project.link}
@@ -70,7 +68,6 @@ const Portfolio = () => {
                     View Live Project
                   </Link>
                 </div>
-              )}
             </div>
           ))}
         </div>

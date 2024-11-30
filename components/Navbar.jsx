@@ -62,8 +62,8 @@ const Navbar = () => {
           </ul>
           <nav className="grid grid-flow-row gap-4 mt-4">
             {socialButtons.map((button) => (
-              <Link key={button.id} href={button.href} className="rounded-xl">
-                <button.icon className="btn size-12" />
+              <Link key={button.id} href={button.href} className="btn btn-primary">
+                <button.icon className="size-12" />
               </Link>
             ))}
             <ThemeController />
