@@ -9,7 +9,7 @@ import {
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-base-200">
       {" "}
       <Hero />
       <KeyMetrics />
@@ -17,6 +17,6 @@ export default function Home() {
       <Portfolio />
       <Services />
       <Contact />
-    </>
+    </div>
   );
 }

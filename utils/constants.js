@@ -191,7 +191,7 @@ export const stackItems = [
   },
   {
     id: 5,
-    name: "Tailwind CSS",
+    name: "Tailwind",
     icon: RiTailwindCssFill,
     color: ICON_COLORS.Tailwind,
   },
@@ -227,7 +227,7 @@ export const stackItems = [
   },
   {
     id: 11,
-    name: "Framer Motion",
+    name: "Motion",
     icon: SiFramer,
     color: ICON_COLORS.FramerMotion,
   },

@@ -1,90 +1,79 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/utils/constants";
-import { motion } from "framer-motion";
 
 const Portfolio = () => {
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+  const [activeCard, setActiveCard] = useState(null);
+
+  const toggleCard = (id) => {
+    setActiveCard((prev) => (prev === id ? null : id)); // Toggle card on click
   };
 
   return (
-    <section id="projects" className="py-16 text-gray-200 bg-gray-950">
+    <section id="projects" className="py-16 text-base-content">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-5xl md:text-6xl text-gray-200 font-bold mb-8 text-center">
+        <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
           Projects
         </h2>
-        {/* Grid Layout */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: 0.15,
-              },
-            },
-          }}
-        >
+        {/* Flexbox Layout */}
+        <div className="flex flex-wrap gap-6 justify-center p-4">
           {projects.map((project) => (
-            <motion.div
+            <div
               key={project.id}
-              className="card bg-gray-700 shadow-xl rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300"
-              variants={cardVariants}
+              className={`flex flex-col p-4 items-center border border-white/30 rounded-xl shadow-md transition-all duration-300 ${
+                activeCard === project.id ? "bg-base-200 p-6 w-full sm:w-[70%] lg:w-[50%]" : "w-full sm:max-w-lg"
+              }`}
+              onClick={() => toggleCard(project.id)}
             >
               {/* Project Image */}
-              <figure className="h-100 overflow-hidden">
+              <div className="w-full h-60 overflow-hidden rounded-t-xl">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={400}
-                  height={300}
+                  height={200}
                   className="object-cover w-full h-full"
                 />
-              </figure>
-
+              </div>
               {/* Project Details */}
-              <div className="card-body p-6">
-                <h2 className="card-title text-blue-300 text-xl sm:text-2xl font-bold mb-2">
-                  {project.title}
-                </h2>
-                <p className="text-gray-300 font-thin">{project.description}</p>
-
+              <div className="flex flex-col items-center justify-center mt-4">
+                <h3 className="text-lg font-bold">{project.title}</h3>
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center mt-2">
                   {project.techStack.map((tech, index) => (
                     <span
                       key={index}
-                      className=" flex items-center gap-2 px-1 py-3 text-md"
+                      className="flex items-center gap-2 text-sm"
                     >
                       <tech.icon
-                        className="w-8 h-8"
+                        className="w-6 h-6"
                         style={{ color: tech.color }}
                       />
                     </span>
                   ))}
                 </div>
+              </div>
 
-                <div className="flex">
+              {/* Expandable Content */}
+              {activeCard === project.id && (
+                <div className="mt-4">
+                  <p className="text-base-content mb-4">{project.description}</p>
                   <Link
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary text-gray-800 w-full"
+                    className="btn btn-accent text-accent-content w-full"
                   >
                     View Live Project
                   </Link>
                 </div>
-              </div>
-            </motion.div>
+              )}
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
