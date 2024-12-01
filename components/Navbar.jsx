@@ -22,7 +22,7 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <li
               key={index}
-              className="transform transition-all duration-300 ease-in-out text-2xl"
+              className="hover:text-secondary text-lg"
             >
               <Link href={link.path}>{link.title}</Link>
             </li>
@@ -37,7 +37,7 @@ const Navbar = () => {
         onClick={toggleNav}
         aria-expanded={nav}
         aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
-        className="md:hidden border border-primary text-base-content absolute top-4 right-4 rounded-full z-50 p-4"
+        className="md:hidden bg-base-100 border border-bg-base-200 bg-gradient-to-br from-white/10 to-transparent absolute top-4 right-4 rounded-full z-50 p-4"
       >
         {nav ? <MdClose size={24} /> : <MdMenu size={24} />}
       </div>

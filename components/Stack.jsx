@@ -5,7 +5,7 @@ import { stackItems } from "../utils/constants";
 
 const Stack = () => {
   return (
-    <section id="stack" className="py-8 relative overflow-hidden">
+    <section id="tech-stack" className="py-8 relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 text-center relative z-10">
         <h2 className="text-5xl md:text-6xl text-primary font-bold mb-8">
           Tech Stack

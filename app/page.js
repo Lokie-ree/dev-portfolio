@@ -12,10 +12,10 @@ export default function Home() {
     <div className="bg-base-200">
       {" "}
       <Hero />
-      <KeyMetrics />
-      <Stack />
-      <Portfolio />
       <Services />
+      <KeyMetrics />
+      <Portfolio />
+      <Stack />
       <Contact />
     </div>
   );

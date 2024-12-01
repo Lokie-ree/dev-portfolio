@@ -29,8 +29,10 @@ export const TOP_COLORS = ["#30A2F2", "#1E67C6", "#076AF5", "#0F39F5"];
 
 export const navLinks = [
   { title: "Home", path: "#home" },
-  { title: "Stack", path: "#stack" },
+  {title: "Services", path: "#services"},
+  { title: "Key Metrics", path: "#key-metrics" },
   { title: "Projects", path: "#projects" },
+  { title: "Tech Stack", path: "#tech-stack" },
   { title: "Contact", path: "#contact" },
 ];
 
