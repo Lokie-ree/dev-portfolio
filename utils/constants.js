@@ -292,41 +292,42 @@ export const metrics = [
 
 export const services = [
   {
-    id: "01",
-    title: "Web Design",
-    description:
-      "Crafting visually stunning and user-friendly websites tailored to any business niche",
+    id: 1,
+    title: "Custom Web Development",
+    image: "/assets/custom_web_development.png",
+    description: "I build tailored websites and web applications, including scalable CMS and Progressive Web Apps, designed to meet your unique needs.",  
   },
   {
-    id: "02",
-    title: "SEO Optimization",
-    description:
-      "Enhancing your website's visibility and ranking on search engines",
+    id: 2,
+    title: "E-Commerce Solutions",
+    image: "/assets/ecommerce_solutions.png",
+    description: "From intuitive storefronts to secure payment integration, I create e-commerce platforms that drive sales and deliver seamless user experiences.", 
   },
   {
-    id: "03",
-    title: "UX/UI Design",
-    description:
-      "Creating intuitive and engaging user experiences and interfaces to add a spark to your business",
+    id: 3,
+    title: "Website Optimization & Maintenance",
+    image: "/assets/website_optimization_maintenance.png",
+    description: "I enhance website speed, performance, and reliability while providing ongoing updates to keep your site running smoothly.",
   },
   {
-    id: "04",
-    title: "Digital Marketing",
-    description:
-      "Strategizing and executing comprehensive digital marketing to enhance your visibility",
-  },
-
-  {
-    id: "05",
-    title: "Content Creation",
-    description:
-      "Crafting engaging and relevant content, including blogs, videos, and more",
+    id: 4,
+    title: "UX/UI & Interactive Design",
+    image: "/assets/ux_ui_interactive_design.png",
+    description: "I design intuitive, visually engaging interfaces that prioritize user experience and adapt seamlessly across all devices.",
   },
 
   {
-    id: "06",
-    title: "Social Media Management",
-    description: "Managing your social media channels to build brand awareness",
+    id: 5,
+    title: "SEO & Digital Marketing",
+    image: "/assets/seo_digital_marketing.png",
+    description: "Boost your online presence with targeted SEO strategies, engaging content, and effective digital marketing solutions.",
+  },
+
+  {
+    id: 6,
+    title: "API & Third-Party Integrations",
+    image: "/assets/api_third_party_integration.png",
+    description: "I connect your systems with custom APIs and third-party tools, ensuring seamless functionality and enhanced efficiency.",
   },
 ];
 

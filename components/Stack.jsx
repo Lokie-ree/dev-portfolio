@@ -14,7 +14,7 @@ const Stack = () => {
           {stackItems.map((item, index) => (
             <div
               key={index}
-              className="relative flex flex-col mx-auto items-center justify-center w-32 h-32 sm:w-40 sm:h-40 gap-2 bg-gradient-to-br from-white/10 to-transparent bg-white/30 border border-white/20 rounded-full shadow-lg backdrop-blur-md hover:scale-105 transition-transform duration-300"
+              className="relative flex flex-col bg-base-100 mx-auto items-center justify-center w-32 h-32 sm:w-40 sm:h-40 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl hover:scale-105 transition-transform duration-300"
             >
               <div
                 className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center"

@@ -12,7 +12,7 @@ const KeyMetrics = () => {
           {metrics.map((metric) => (
             <div
               key={metric.id}
-              className="stat p-6 bg-white/30 rounded-2xl shadow-lg backdrop-blur-md hover:scale-105 transition-transform duration-300"
+              className="stat p-6 bg-base-100 bg-gradient-to-br from-white/10 to-transparent rounded-2xl shadow-lg backdrop-blur-md hover:scale-105 transition-transform duration-300"
             >
               <div className="mb-4">
                 <span className="stat-value text-accent text-3xl sm:text-4xl">

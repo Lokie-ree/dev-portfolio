@@ -23,7 +23,7 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="flex flex-col items-center p-4 border bg-white/30 rounded-xl shadow-md w-full sm:w-[48%] lg:w-[30%] transition-transform duration-300 hover:scale-105"
+              className="flex flex-col items-center p-4 bg-base-100 bg-gradient-to-br from-white/10 to-transparent rounded-xl shadow-xl w-full sm:w-[48%] lg:w-[30%] transition-transform duration-300 hover:scale-105"
               onClick={() => toggleCard(project.id)}
             >
               {/* Project Image */}
