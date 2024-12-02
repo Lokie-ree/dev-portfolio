@@ -23,4 +23,15 @@ html {
   .text-hover {
     @apply transition-transform duration-300 hover:scale-125;
   }
+
+ 
+
+  .input-hover {
+    @apply hover:ring-2 hover:ring-secondary hover:shadow-md hover:scale-105 transition-all duration-300 ease-in-out;
+  }
+
+  .btn-hover {
+    @apply transition-transform duration-300 hover:scale-105 ease-in-out;
+  }
+
 }

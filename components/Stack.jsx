@@ -14,7 +14,7 @@ const Stack = () => {
           {stackItems.map((item, index) => (
             <div
               key={index}
-              className="relative flex flex-col bg-base-100 mx-auto items-center justify-center w-32 h-32 sm:w-40 sm:h-40 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl card-hover"
+              className="relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-32 h-32 sm:w-40 sm:h-40 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl card-hover"
             >
               <div
                 className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center"
@@ -22,7 +22,7 @@ const Stack = () => {
               >
                 <item.icon className="w-full h-full" />
               </div>
-              <span className="text-sm sm:text-md font-semibold text-base-content mt-2">
+              <span className="text-sm sm:text-md font-semibold text-base-content mt-2 group-hover:text-secondary">
                 {item.name}
               </span>
             </div>

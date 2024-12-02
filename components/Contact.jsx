@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaPhoneVolume } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -11,6 +10,7 @@ const Contact = () => {
           <h2 className="text-5xl md:text-6xl font-bold text-primary text-center mb-12">
             Contact Me
           </h2>
+          <ContactForm />
         </div>
     </section>
   );
