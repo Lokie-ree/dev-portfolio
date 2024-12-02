@@ -15,4 +15,12 @@ html {
   .glass {
     @apply bg-gradient-to-br from-white/10 to-transparent backdrop-blur-lg border border-white/20 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.37)];
   }
+
+  .card-hover {
+    @apply transition-transform duration-300 hover:scale-105 hover:border hover:border-accent;
+  }
+
+  .text-hover {
+    @apply transition-transform duration-300 hover:scale-125;
+  }
 }

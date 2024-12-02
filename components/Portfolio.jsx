@@ -13,17 +13,17 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="projects" className="py-16 text-base-content">
+    <section id="projects" className="py-20 lg:py-24 text-base-content">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-5xl md:text-6xl font-bold text-primary text-center mb-12">
           Projects
         </h2>
         {/* Flexbox Layout */}
-        <div className="flex flex-wrap gap-6 justify-center">
+        <div className="flex flex-col gap-6 justify-center items-center">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="flex flex-col items-center p-4 bg-base-100 bg-gradient-to-br from-white/10 to-transparent rounded-xl shadow-xl w-full sm:w-[48%] lg:w-[30%] transition-transform duration-300 hover:scale-105"
+              className="flex flex-col items-center p-4 bg-base-100 bg-gradient-to-br from-white/10 to-transparent rounded-xl shadow-xl w-full sm:w-[48%] lg:w-[30%] card-hover"
               onClick={() => toggleCard(project.id)}
             >
               {/* Project Image */}

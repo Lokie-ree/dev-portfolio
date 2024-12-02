@@ -295,7 +295,7 @@ export const metrics = [
 export const services = [
   {
     id: 1,
-    title: "Custom Web Development",
+    title: "Custom Web Apps",
     image: "/assets/custom_web_development.png",
     description: "I build tailored websites and web applications, including scalable CMS and Progressive Web Apps, designed to meet your unique needs.",  
   },
@@ -313,7 +313,7 @@ export const services = [
   },
   {
     id: 4,
-    title: "UX/UI & Interactive Design",
+    title: "Interactive UX/UI Design",
     image: "/assets/ux_ui_interactive_design.png",
     description: "I design intuitive, visually engaging interfaces that prioritize user experience and adapt seamlessly across all devices.",
   },

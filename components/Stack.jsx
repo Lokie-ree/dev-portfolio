@@ -5,16 +5,16 @@ import { stackItems } from "../utils/constants";
 
 const Stack = () => {
   return (
-    <section id="tech-stack" className="py-8 relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-4 text-center relative z-10">
-        <h2 className="text-5xl md:text-6xl text-primary font-bold mb-8">
+    <section id="tech-stack" className="py-20 lg:py-24 relative overflow-hidden">
+      <div className="container max-w-5xl mx-auto px-4 text-center relative z-10">
+        <h2 className="text-5xl md:text-6xl text-primary font-bold mb-12">
           Tech Stack
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {stackItems.map((item, index) => (
             <div
               key={index}
-              className="relative flex flex-col bg-base-100 mx-auto items-center justify-center w-32 h-32 sm:w-40 sm:h-40 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl hover:scale-105 transition-transform duration-300"
+              className="relative flex flex-col bg-base-100 mx-auto items-center justify-center w-32 h-32 sm:w-40 sm:h-40 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl card-hover"
             >
               <div
                 className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center"
