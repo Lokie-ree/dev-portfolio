@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { socialButtons } from "@/utils/constants";
-import SocialButtons from "./SocialButtons";
 
 const Hero = () => {
   return (
@@ -49,12 +48,6 @@ const Hero = () => {
               Contact
             </button>
           </Link>
-        </div>
-        <div className="mt-6">
-          <SocialButtons
-            buttons={socialButtons}
-            iconClass="w-10 h-10"
-          />
         </div>
       </div>
     </section>

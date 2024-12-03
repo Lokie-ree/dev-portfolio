@@ -22,7 +22,7 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <li
               key={index}
-              className="hover:text-secondary text-lg"
+              className="hover:text-secondary text-sm lg:text-md"
             >
               <Link href={link.path}>{link.title}</Link>
             </li>

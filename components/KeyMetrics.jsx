@@ -19,7 +19,7 @@ const KeyMetrics = () => {
                   {metric.value}
                 </span>
               </div>
-              <div className="stat-title flex items-center gap-3 text-xl sm:text-2xl text-primary-content font-bold mb-2">
+              <div className="stat-title flex items-center gap-3 text-xl sm:text-2xl text-base-content font-bold mb-2">
               <metric.icon className="w-6 h-6 sm:w-8 sm:h-8 group-hover:text-primary" />
               <h1 className="group-hover:text-secondary">{metric.title}</h1>
               </div>

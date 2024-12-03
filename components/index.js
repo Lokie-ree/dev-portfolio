@@ -1,4 +1,4 @@
-export { default as Contact } from "./Contact";
+export { default as ContactSection } from "./ContactSection";
 export { default as Hero } from "./Hero";
 export { default as KeyMetrics } from "./KeyMetrics";
 export { default as Portfolio } from "./Portfolio";

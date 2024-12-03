@@ -1,5 +1,5 @@
 import {
-  Contact,
+  ContactSection,
   Hero,
   KeyMetrics,
   Portfolio,
@@ -16,7 +16,7 @@ export default function Home() {
       <KeyMetrics />
       <Portfolio />
       <Stack />
-      <Contact />
+      <ContactSection />
     </div>
   );
 }
