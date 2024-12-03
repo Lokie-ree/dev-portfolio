@@ -15,7 +15,7 @@ const Portfolio = () => {
   return (
     <section id="projects" className="py-20 lg:py-24 text-base-content">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-bold text-primary text-center mb-12">
+        <h2 className="text-5xl md:text-6xl font-bold text-base-content text-center mb-12">
           Projects
         </h2>
         {/* Flexbox Layout */}
@@ -38,7 +38,7 @@ const Portfolio = () => {
               </div>
               {/* Project Details */}
               <div className="flex flex-col items-center justify-center mt-4">
-                <h3 className="text-lg font-bold mb-2">{project.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">{project.title}</h3>
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 justify-center">
                   {project.techStack.map((tech, index) => (
@@ -63,7 +63,7 @@ const Portfolio = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-accent text-accent-content w-full"
+                    className="btn btn-primary btn-hover text-accent-content w-full"
                   >
                     View Live Project
                   </Link>

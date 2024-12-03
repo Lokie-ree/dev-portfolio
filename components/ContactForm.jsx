@@ -81,7 +81,7 @@ const ContactForm = () => {
             className="textarea textarea-bordered w-full rounded-xl shadow-sm placeholder:text-gray-400 text-sm leading-relaxed input-hover outline-none"
             required
           ></textarea>
-          <button type="submit" className="btn btn-accent w-full btn-hover">
+          <button type="submit" className="btn btn-primary w-full btn-hover">
             Send Message
           </button>
         </form>
@@ -96,14 +96,14 @@ const ContactForm = () => {
         <div className="flex justify-center mb-6 ">
           <Link
             href="mailto:rplapointjr@gmail.com"
-            className="btn btn-accent w-full sm:w-[50%] btn-hover"
+            className="btn btn-primary w-full sm:w-[50%] btn-hover"
           >
-            Email
+            Send Email
           </Link>
         </div>
         {/* Social Icons */}
         <div className="flex items-center justify-center gap-4">
-          <SocialButtons buttons={socialButtons} iconClass="w-12 h-12" />
+          <SocialButtons buttons={socialButtons} iconClass="w-10 h-10" />
         </div>
       </div>
     </div>

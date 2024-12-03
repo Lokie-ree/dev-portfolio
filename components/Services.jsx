@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 lg:py-24 text-base-content">
       <div className="container max-w-5xl mx-auto px-6">
-          <h2 className="text-5xl md:text-6xl font-bold text-primary text-center mb-12">Services</h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">Services</h2>
         <div className="flex flex-col sm:flex-row sm:grid sm:grid-cols-2 lg:grid-col-3 gap-8">
           {services.map((service) => (
             <div className="card card-compact group bg-base-100 bg-gradient-to-br from-white/10 to-transparent w-full shadow-xl card-hover" key={service.id}>
@@ -20,7 +20,7 @@ const Services = () => {
               />
             </figure>
             <div className="card-body p-6">
-              <h2 className="card-title text-lg sm:text-xl font-semibold text-base-content group-hover:text-secondary mb-2">{service.title}</h2>
+              <h2 className="card-title text-xl sm:text-2xl font-bold text-primary group-hover:text-accent mb-2">{service.title}</h2>
               <p className="text-sm sm:text-md">{service.description}</p>
             </div>
           </div>

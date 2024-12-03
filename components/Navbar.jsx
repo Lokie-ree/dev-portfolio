@@ -54,7 +54,7 @@ const Navbar = () => {
                 <Link
                   href={link.path}
                   onClick={closeNav}
-                  className="hover:text-3xl hover:text-secondary hover:scale-125 transition-all duration-300"
+                  className="hover:text-3xl hover:text-primary hover:scale-125 transition-all duration-300"
                 >
                   {link.title}
                 </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
           <nav className="grid grid-flow-row gap-4">
           <SocialButtons
             buttons={socialButtons}
-            iconClass="w-10 h-10"
+            iconClass="w-8 h-8"
           />
             <ThemeController />
           </nav>

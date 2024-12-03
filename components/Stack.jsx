@@ -5,9 +5,9 @@ import { stackItems } from "../utils/constants";
 
 const Stack = () => {
   return (
-    <section id="tech-stack" className="py-20 lg:py-24 relative overflow-hidden">
+    <section id="tech-stack" className="py-20 lg:py-24 text-base-content relative overflow-hidden">
       <div className="container max-w-5xl mx-auto px-4 text-center relative z-10">
-        <h2 className="text-5xl md:text-6xl text-primary font-bold mb-12">
+        <h2 className="text-5xl md:text-6xl text-base-content font-bold mb-12">
           Tech Stack
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -22,7 +22,7 @@ const Stack = () => {
               >
                 <item.icon className="w-full h-full" />
               </div>
-              <span className="text-sm sm:text-md font-semibold text-base-content mt-2 group-hover:text-secondary">
+              <span className="text-sm sm:text-md font-semibold text-base-content mt-2 group-hover:text-accent">
                 {item.name}
               </span>
             </div>

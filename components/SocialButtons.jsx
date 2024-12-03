@@ -7,8 +7,8 @@ const SocialButtons = ({buttons, iconClass = "w-8 h-8"}) => {
   return (
     <div className="flex flex-wrap gap-2">
         {buttons.map((button) => (
-            <Link key={button.id} href={button.href} className="transition-transform transform hover:scale-110 focus:scale-110" aria-label={button.label || "Social Link"}>
-                <button.icon className={`${iconClass} text-primary hover:text-secondary`} />
+            <Link key={button.id} href={button.href} className="transition-transform transform hover:scale-105" aria-label={button.label || "Social Link"}>
+                <button.icon className={`${iconClass} text-accent `} />
             </Link>
         ))}
     </div>
