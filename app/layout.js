@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import {Analytics} from "@vercel/analytics";
 
 export const metadata = {
   title: "Developer Portfolio",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={`antialiased`}>
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
