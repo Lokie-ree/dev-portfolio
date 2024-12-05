@@ -11,7 +11,36 @@ html {
   scroll-behavior: smooth;
 }
 
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
 @layer utilities {
+  .cta-btn {
+    @apply btn btn-accent rounded-full hover:scale-105 hover:bg-secondary transition-all duration-300 
+  }
+
+  .hero-bg {
+    @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20;
+  }
+
   .glass {
     @apply bg-gradient-to-br from-white/10 to-transparent backdrop-blur-lg border border-white/20 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.37)];
   }

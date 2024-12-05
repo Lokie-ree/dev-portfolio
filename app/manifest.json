@@ -1,9 +1,9 @@
 {
   "name": "Developer Portfolio",
   "short_name": "Portfolio",
-  "description": "A modern developer portfolio built with the latest tech stack. Showcases projects and skills with sleek animations and a responsiver design",
+  "description": "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
   "start_url": "/",
-  "background_color": "#f2f2f2",
+  "background_color": "#000000",
   "theme_color": "#0000ff",
   "icons": [
     {
