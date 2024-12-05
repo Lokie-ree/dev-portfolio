@@ -1,0 +1,15 @@
+{
+  "name": "Developer Portfolio",
+  "short_name": "Portfolio",
+  "description": "A modern developer portfolio built with the latest tech stack. Showcases projects and skills with sleek animations and a responsiver design",
+  "start_url": "/",
+  "background_color": "#f2f2f2",
+  "theme_color": "#0000ff",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
