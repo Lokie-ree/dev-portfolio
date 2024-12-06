@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      url: "http://localhost:3000",
+      url: "https://dev-portfolio-one-swart.vercel.app/",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,

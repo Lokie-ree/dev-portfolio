@@ -5,6 +5,6 @@ export default function robots() {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://dev-portfolio-one-swart.vercel.app//sitemap.xml",
+    sitemap: "https://dev-portfolio-one-swart.vercel.app/sitemap.xml",
   }
 }

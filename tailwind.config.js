@@ -7,14 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-      fontFamily: {
-        sans: ["Quicksand", "sans-serif"],
-        exo: ["Exo 2", "sans-serif"],
-      },
     },
   },
   daisyui: {
