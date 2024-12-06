@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import {Analytics} from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const websiteURL = "http://localhost:3000";
+const websiteURL = "https://dev-portfolio-one-swart.vercel.app/";
 
 export const metadata = {
   
