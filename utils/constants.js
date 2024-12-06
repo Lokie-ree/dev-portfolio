@@ -8,8 +8,9 @@ import {
   FaCode,
   FaDiagramProject,
   FaRocket,
+  FaUsers,
 } from "react-icons/fa6";
-import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
+import { RiNextjsLine, RiTailwindCssFill, RiUploadCloudFill } from "react-icons/ri";
 import {
   SiSanity,
   SiVite,
@@ -20,6 +21,7 @@ import {
   SiTypescript,
   SiStripe,
   SiGoogleanalytics,
+  SiPagespeedinsights,
 } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 
@@ -257,15 +259,15 @@ export const metrics = [
   {
     id: 1,
     value: "16+",
-    title: "Technologies Explored",
-    description: "Proficient in modern frameworks and libraries.",
+    title: "Technologies",
+    description: "Modern frameworks",
     icon: FaCode,
   },
   {
     id: 2,
     value: "5+",
-    title: "Projects Completed",
-    description: "From small applications to complex web platforms.",
+    title: "Projects",
+    description: "Apps and platforms built",
     icon: FaDiagramProject,
   },
   {
@@ -273,22 +275,43 @@ export const metrics = [
     value: "99%",
     title: "Code Quality",
     description:
-      "Commitment to writing clean, efficient, and maintainable code.",
+      "Clean, efficient code",
     icon: SiGoogleanalytics,
   },
   {
     id: 4,
     value: "250+",
-    title: "Commits on GitHub",
-    description: "Active contributor to personal and collaborative projects.",
+    title: "GitHub Commits",
+    description: "Active contribution",
     icon: FaGithub,
   },
   {
     id: 5,
     value: "300+",
-    title: "Hours of Learning",
-    description: "Dedicated to improving skills and mastering new tech tools.",
+    title: "Learning Hours",
+    description: "Continuous improvement",
     icon: FaRocket,
+  },
+  {
+    id: 6,
+    value: "5+",
+    title: "Collaboration",
+    description: "Delivered team results",
+    icon: FaUsers,
+  },
+  {
+    id: 7,
+    value: "2X",
+    title: "Performance",
+    description: "Optimization and speed",
+    icon: SiPagespeedinsights,
+  },
+  {
+    id: 8,
+    value: "5+",
+    title: "Live Deployments",
+    description: "Web apps currently live",
+    icon: RiUploadCloudFill,
   },
 ];
 

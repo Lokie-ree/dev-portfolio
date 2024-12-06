@@ -41,12 +41,20 @@ html {
     @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20;
   }
 
-  .glass {
-    @apply bg-gradient-to-br from-white/10 to-transparent backdrop-blur-lg border border-white/20 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.37)];
+  .grid-cols-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 
   .card-hover {
-    @apply transition-transform duration-300 hover:scale-105 hover:border hover:border-accent;
+    @apply hover:shadow-2xl hover:scale-105 hover:border hover:border-accent transition-transform duration-300;
+  }
+
+  .card-style {
+    @apply bg-base-100 bg-gradient-to-br from-white/10 to-transparent shadow-xl rounded-lg;
+  }
+  
+  .glass {
+    @apply bg-gradient-to-br from-white/10 to-transparent backdrop-blur-lg border border-white/20 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.37)];
   }
 
   .text-hover {
