@@ -13,7 +13,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="projects" className="py-20 lg:py-24 text-base-content">
+    <section id="projects" className="py-20 lg:py-24 portfolio-bg text-base-content">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-5xl md:text-6xl font-bold text-base-content text-center mb-12">
           Projects

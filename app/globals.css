@@ -41,6 +41,26 @@ html {
     @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20;
   }
 
+  .services-bg {
+    @apply bg-gradient-to-tr from-secondary/10 via-primary/10 to-accent/5;
+  }
+
+  .metrics-bg {
+    @apply bg-gradient-to-bl from-primary/10 via-secondary/20 to-neutral/10;
+  }
+
+  .portfolio-bg {
+    @apply bg-gradient-to-r from-accent/10 via-secondary/10 to-primary/5;
+  }
+
+  .stack-bg {
+    @apply bg-gradient-to-t from-secondary/20 via-accent/10 to-primary/5;
+  }
+
+  .contact-bg {
+    @apply bg-gradient-to-tl from-primary/20 via-secondary/10 to-accent/5;
+  }
+
   .grid-cols-responsive {
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }

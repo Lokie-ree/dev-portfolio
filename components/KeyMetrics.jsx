@@ -3,7 +3,7 @@ import { metrics } from "@/utils/constants";
 
 const KeyMetrics = () => {
   return (
-    <section id="key-metrics" className="py-20 lg:py-24 relative overflow-hidden text-base-content">
+    <section id="key-metrics" className="py-20 lg:py-24 metrics-bg relative overflow-hidden text-base-content">
       <div className="container max-w-5xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
           Key Metrics

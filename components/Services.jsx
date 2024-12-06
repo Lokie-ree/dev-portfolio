@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 lg:py-24 text-base-content">
+    <section id="services" className="py-20 lg:py-24 services-bg text-base-content">
       <div className="container max-w-5xl mx-auto px-4">
           <h2 className="text-5xl md:text-6xl font-bold text-center mb-12 lg:mb-16">Services</h2>
         <div className="grid grid-cols-responsive gap-6">
