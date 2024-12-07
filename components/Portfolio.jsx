@@ -2,72 +2,81 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { projects } from "@/utils/constants";
 
 const Portfolio = () => {
-  const [activeCard, setActiveCard] = useState(null);
+  const [flippedCard, setFlippedCard] = useState(null);
 
-  const toggleCard = (id) => {
-    setActiveCard((prev) => (prev === id ? null : id)); // Toggle card on click
+  const toggleFlip = (id) => {
+    setFlippedCard((prev) => (prev === id ? null : id)); // Toggle flipping state
   };
 
   return (
-    <section id="projects" className="py-20 lg:py-24 portfolio-bg text-base-content">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-bold text-base-content text-center mb-12">
+    <section
+      id="projects"
+      className="py-20 lg:py-24 portfolio-bg text-base-content"
+    >
+      <div className="container max-w-6xl mx-auto px-6">
+        <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
           Projects
         </h2>
-        {/* Flexbox Layout */}
-        <div className="flex flex-col gap-6 justify-center items-center">
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="flex flex-col items-center p-4 bg-base-100 bg-gradient-to-br from-white/10 to-transparent rounded-xl shadow-xl w-full sm:w-[48%] lg:w-[30%] card-hover"
-              onClick={() => toggleCard(project.id)}
+              className="perspective w-full h-64 relative"
+              aria-label={`Project: ${project.title}`}
+              onClick={() => toggleFlip(project.id)}
             >
-              {/* Project Image */}
-              <div className="w-full h-52 overflow-hidden rounded-t-xl">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={400}
-                  height={200}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              {/* Project Details */}
-              <div className="flex flex-col items-center justify-center mt-4">
-                <h3 className="text-xl sm:text-2xl font-bold mb-2">{project.title}</h3>
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {project.techStack.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="flex items-center gap-2 text-sm"
-                    >
-                      <tech.icon
-                        className="w-5 h-5"
-                        style={{ color: tech.color }}
-                      />
-                    </span>
-                  ))}
+              {/* Inner Card */}
+              <div
+                className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
+                  flippedCard === project.id ? "rotate-y-180" : ""
+                }`}
+              >
+                {/* Front Face */}
+                <div className="absolute w-full h-full backface-hidden">
+                  <figure className="w-full h-full rounded-xl overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      aria-hidden="true"
+                    />
+                  </figure>
                 </div>
-              </div>
 
-              {/* Conditional Content */}
-             
-                <div className={`mt-4 md:block ${activeCard === project.id ? "block" : "hidden"}`}>
-                  <p className="text-base-content mb-4">{project.description}</p>
-                  <Link
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary btn-hover text-accent-content w-full"
-                  >
-                    View Live Project
-                  </Link>
+                {/* Back Face */}
+                <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-base-100 p-6 rounded-xl shadow-lg">
+                  <h3 className="text-2xl sm:text-3xl text-secondary font-bold mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4">
+                    {project.description}
+                  </p>
+                  {/* Tech Stack and Button */}
+                  <div className="flex items-center justify-between ">
+                    <div className="flex gap-x-2">
+                      {project.techStack.map((tech, index) => (
+                        <tech.icon
+                          key={index}
+                          className="w-6 h-6"
+                          style={{ color: tech.color }}
+                        />
+                      ))}
+                    </div>
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cta-btn"
+                    >
+                      View
+                    </Link>
+                  </div>
                 </div>
+              </div>
             </div>
           ))}
         </div>

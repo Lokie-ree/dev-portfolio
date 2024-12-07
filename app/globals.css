@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*, :root {
   margin: 0;
+  --theme: night;
 }
 
 html {
@@ -32,10 +33,32 @@ html {
   animation: fadeIn 1s ease-out;
 }
 
+/* Perspective for 3D Effect */
+.perspective {
+  perspective: 1000px;
+}
+
+/* Transform style for 3D */
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Hides the back face */
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Rotate for the back face */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Group Hover Flip Trigger */
+.group:hover .relative {
+  transform: rotateY(180deg);
+}
+
 @layer utilities {
-  .cta-btn {
-    @apply btn btn-accent rounded-full hover:scale-105 hover:bg-secondary transition-all duration-300 
-  }
 
   .hero-bg {
     @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20;
@@ -60,9 +83,24 @@ html {
   .contact-bg {
     @apply bg-gradient-to-tl from-primary/20 via-secondary/10 to-accent/5;
   }
+  .cta-btn {
+    @apply btn btn-primary rounded-full hover:scale-105 hover:bg-secondary hover:border hover:border-accent transition-all duration-300 
+  }
 
-  .grid-cols-responsive {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  .portfolio-card {
+    @apply bg-base-100 bg-gradient-to-br from-white/10 to-transparent rounded-xl shadow-lg transition-transform duration-300;
+  }
+
+  .portfolio-card-hover {
+    @apply hover:shadow-2xl hover:scale-105 hover:border hover:border-accent;
+  }
+
+  .portfolio-expanded {
+    @apply transition-all duration-300 ease-in-out max-h-0 overflow-hidden;
+  }
+
+  .portfolio-expanded-open {
+    @apply max-h-screen p-4;
   }
 
   .card-hover {

@@ -1,4 +1,8 @@
+'use client'
+
 import React from "react";
+import SocialButtons from "./SocialButtons";
+import { socialButtons } from "@/utils/constants";
 
 const Footer = () => {
   return (
@@ -8,7 +12,7 @@ const Footer = () => {
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
-          Social Buttons go here
+        <SocialButtons buttons={socialButtons} iconClass="w-10 h-10" />
         </div>
       </nav>
       <aside className="grid-flow-col items-center">

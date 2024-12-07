@@ -29,6 +29,11 @@ import { ICON_COLORS } from "./colors";
 
 export const TOP_COLORS = ["#30A2F2", "#1E67C6", "#076AF5", "#0F39F5"];
 
+export const themes = {
+  light: "nord",
+  dark: "night"
+};
+
 export const navLinks = [
   { title: "Home", path: "#home" },
   {title: "Services", path: "#services"},
