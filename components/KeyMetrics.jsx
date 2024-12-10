@@ -4,11 +4,11 @@ import { metrics } from "@/utils/constants";
 const KeyMetrics = () => {
   return (
     <section id="key-metrics" className="py-20 lg:py-24 metrics-bg relative overflow-hidden text-base-content">
-      <div className="container max-w-5xl mx-auto px-4">
+      <div className="container max-w-4xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
           Key Metrics
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {metrics.map((metric) => (
             <div
               key={metric.id}
@@ -21,11 +21,11 @@ const KeyMetrics = () => {
                 </div>
               </div>
 
-              <div className="stat-title text-xl sm:text-2xl text-secondary font-semibold sm:mt-2 sm:mb-2">
+              <div className="stat-title text-2xl md:text-3xl text-secondary font-semibold sm:mt-2 sm:mb-2">
                 {metric.title}
               </div>
               
-              <div className="stat-desc text-md text-base-content mt-1 truncate">
+              <div className="stat-desc text-lg text-base-content mt-1 truncate">
                 {metric.description}
               </div>
             </div>

@@ -2,20 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*, :root {
+html, body {
   margin: 0;
-  --theme: night;
-}
-
-html {
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @keyframes fadeIn {
@@ -60,6 +53,18 @@ html {
 
 @layer utilities {
 
+  .nav-link {
+    @apply font-medium text-base-content hover:text-primary transition-colors duration-300;
+  }
+
+  .fixed-menu {
+    @apply fixed inset-0 h-full w-full bg-red-500;
+  }
+  
+  .nav-bg {
+    @apply bg-base-300 shadow-md;
+  }
+
   .hero-bg {
     @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20;
   }
@@ -81,10 +86,10 @@ html {
   }
 
   .contact-bg {
-    @apply bg-gradient-to-tl from-primary/20 via-secondary/10 to-accent/5;
+    @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/5;
   }
   .cta-btn {
-    @apply btn btn-primary rounded-full hover:scale-105 hover:bg-secondary hover:border hover:border-accent transition-all duration-300 
+    @apply btn btn-primary rounded-xl hover:scale-105 hover:bg-secondary hover:border hover:border-accent transition-all duration-300;
   }
 
   .portfolio-card {
@@ -108,7 +113,7 @@ html {
   }
 
   .card-style {
-    @apply bg-base-100 bg-gradient-to-br from-white/10 to-transparent shadow-xl rounded-lg;
+    @apply bg-base-100 bg-gradient-to-br from-white/10 to-transparent shadow-xl rounded-xl;
   }
   
   .glass {
@@ -120,7 +125,7 @@ html {
   }
 
   .input-hover {
-    @apply hover:ring-2 hover:ring-accent hover:shadow-md transition-all duration-300 ease-in-out;
+    @apply hover:ring-2 hover:ring-accent hover:shadow-md transition-all duration-300;
   }
 
   .btn-hover {

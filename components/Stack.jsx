@@ -6,11 +6,11 @@ import { stackItems } from "../utils/constants";
 const Stack = () => {
   return (
     <section id="tech-stack" className="py-20 lg:py-24 stack-bg text-base-content relative overflow-hidden">
-      <div className="container max-w-5xl mx-auto px-4 text-center relative z-10">
+      <div className="container max-w-4xl mx-auto px-4 text-center relative z-10">
         <h2 className="text-5xl md:text-6xl text-base-content font-bold mb-12">
           Tech Stack
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
           {stackItems.map((item, index) => (
             <div
               key={index}

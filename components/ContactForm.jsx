@@ -33,17 +33,15 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="card gap-4">
+    <div className="card p-6 rounded-xl shadow-md bg-gradient-to-br from-white/10 to-transparent">
       <Toaster />
-      {/* Left Side: Form */}
-      <div className="card-body bg-base-100 bg-gradient-to-br from-white/10 to-transparent rounded-xl">
-        <h3 className="text-3xl md:text-4xl font-bold text-center text-base-content mb-6">
+        <h3 className="text-3xl md:text-4xl font-bold text-center mb-6">
           Contact Me
         </h3>
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
           <label
             htmlFor="name"
-            className="input input-bordered flex text-sm items-center rounded-xl shadow-sm gap-2 input-hover"
+            className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
           >
             <MdOutlinePerson />
             <input
@@ -58,7 +56,7 @@ const ContactForm = () => {
 
           <label
             htmlFor="email"
-            className="input input-bordered flex text-sm items-center rounded-xl shadow-sm gap-2 input-hover"
+            className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
           >
             <MdOutlineEmail />
             <input
@@ -75,14 +73,14 @@ const ContactForm = () => {
             rows="4"
             placeholder="Message"
             aria-label="Message"
-            className="textarea textarea-bordered w-full rounded-xl shadow-sm placeholder:text-gray-400 text-sm leading-relaxed input-hover outline-none"
+            className="textarea textarea-bordered w-full rounded-xl placeholder:text-gray-400 text-sm leading-relaxed input-hover outline-none"
             required
           ></textarea>
-          <button type="submit" className="btn btn-primary w-full btn-hover">
+          <button type="submit" className="cta-btn w-full">
             Send Message
           </button>
         </form>
-      </div>
+     
 
       {/* Right Side: Additional Info */}
       

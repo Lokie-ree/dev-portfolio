@@ -9,7 +9,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="bg-base-200">
+    <div>
       {" "}
       <Hero />
       <Services />

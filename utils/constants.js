@@ -49,7 +49,7 @@ export const projects = [
     title: "E-Commerce",
     description:
       "A feature-rich e-commerce platform with dynamic cart functionality, product listing, and detail pages powered by Sanity CMS. Integrated with Stripe for secure and seamless payment processing.",
-    image: "/assets/ecommerce1.png",
+    image: "/assets/Screenshot 2024-12-09 134236.png",
     link: "https://buttercream-dream.vercel.app/",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
