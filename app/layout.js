@@ -1,15 +1,14 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import {Analytics} from "@vercel/analytics/react";
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
+import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { playfairDisplay, inter } from "@/components/fonts";
+import { playfairDisplay, inter } from "@/utils/fonts";
 import { themes } from "@/utils/constants";
 
 const websiteURL = "https://dev-portfolio-one-swart.vercel.app/";
 
 export const metadata = {
-  
   metadataBase: new URL(websiteURL),
   alternates: {
     canonical: "/",
@@ -19,23 +18,30 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
-    description: "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
+    title:
+      "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
+    description:
+      "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
     url: websiteURL,
-    siteName: "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
+    siteName:
+      "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
     images: "./opengraph-image.png",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
-    description: "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
+    title:
+      "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
+    description:
+      "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
     creator: "Randall LaPoint, Jr.",
     images: ["./twitter-image.png"],
   },
-  
-  title: "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
-  description: "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
+
+  title:
+    "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
+  description:
+    "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
   author: "Randall LaPoint, Jr.",
   keywords: [
     "Randall LaPoint",
@@ -59,13 +65,15 @@ export const metadata = {
     "Tech Stack",
     "Responsive Design",
     "SEO Optimization",
-  ]
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme={themes.dark}>
-      <body className={`${playfairDisplay.className} ${inter.className} antialiased`}>
+      <body
+        className={`${playfairDisplay.className} ${inter.className} antialiased`}
+      >
         <Navbar />
         {children}
         <Analytics />

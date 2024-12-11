@@ -5,7 +5,7 @@ import {
   Portfolio,
   Services,
   Stack,
-} from "@/components";
+} from "@/components/sections";
 
 export default function Home() {
   return (
