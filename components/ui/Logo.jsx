@@ -12,7 +12,7 @@ const Logo = () => {
         alt="Site Logo"
         width={44}
         height={44}
-        className="w-12 h-12 md:w-16 md:h-16 object-contain hover:scale-105 transition-transform"
+        className="w-14 h-14 md:w-18 md:h-18 object-contain hover:scale-105 transition-transform"
       />
     </Link>
   );

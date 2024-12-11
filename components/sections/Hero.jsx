@@ -10,7 +10,7 @@ const Hero = () => {
       id="home"
       className="relative hero-bg grid min-h-screen py-20 lg:py-24 text-base-content bg-base-100 place-content-center overflow-hidden"
     >
-      <div className="z-10 flex flex-col items-center mt-2 md:mt-8">
+      <div className="z-10 flex flex-col items-center mt-4 md:mt-12">
         <h1 className="text-primary fade-in text-4xl md:text-6xl font-extrabold">
           Hello, I am
         </h1>

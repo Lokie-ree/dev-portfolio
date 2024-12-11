@@ -21,7 +21,7 @@ const Portfolio = () => {
           Projects
         </h2>
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
@@ -49,7 +49,7 @@ const Portfolio = () => {
 
                 {/* Back Face */}
                 <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-base-100 p-6 rounded-xl shadow-lg">
-                  <h3 className="text-2xl sm:text-3xl text-secondary font-bold mb-2">
+                  <h3 className="text-xl sm:text-2xl text-secondary font-bold mb-2">
                     {project.title}
                   </h3>
                   <p className="text-sm text-gray-500 mb-4">
@@ -61,7 +61,7 @@ const Portfolio = () => {
                       {project.techStack.map((tech, index) => (
                         <tech.icon
                           key={index}
-                          className="w-6 h-6"
+                          className="w-4 h-4"
                           style={{ color: tech.color }}
                         />
                       ))}

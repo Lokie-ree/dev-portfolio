@@ -18,7 +18,7 @@ const Navbar = () => {
   const closeNav = () => setNav(false);
 
   return (
-    <nav className="z-50 fixed flex justify-between items-center w-full px-4 lg:px-8 py-4 backdrop-blur-md bg-gradient-to-b from-base-100 via-base-200/90 to-transparent shadow-md">
+    <nav className="z-50 fixed flex justify-between items-center w-full px-4 lg:px-8 py-4 bg-gradient-to-b from-base-100 via-base-200/90 to-transparent shadow-md">
       {/* Left: Logo */}
       <Logo />
 
@@ -37,7 +37,7 @@ const Navbar = () => {
         onClick={toggleNav}
         aria-expanded={nav}
         aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
-        className="md:hidden bg-base-100 border border-primary rounded-full p-3 shadow-sm hover:shadow-lg transition-transform"
+        className="md:hidden z-[100] bg-base-100 border border-primary rounded-full p-3 shadow-sm hover:shadow-lg transition-transform"
       >
         {nav ? <MdClose size={24} /> : <MdMenu size={24} />}
       </button>

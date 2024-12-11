@@ -10,7 +10,11 @@ import {
   FaRocket,
   FaUsers,
 } from "react-icons/fa6";
-import { RiNextjsLine, RiTailwindCssFill, RiUploadCloudFill } from "react-icons/ri";
+import {
+  RiNextjsLine,
+  RiTailwindCssFill,
+  RiUploadCloudFill,
+} from "react-icons/ri";
 import {
   SiSanity,
   SiVite,
@@ -31,12 +35,12 @@ export const TOP_COLORS = ["#30A2F2", "#1E67C6", "#076AF5", "#0F39F5"];
 
 export const themes = {
   light: "nord",
-  dark: "night"
+  dark: "night",
 };
 
 export const navLinks = [
   { title: "Home", path: "#home" },
-  {title: "Services", path: "#services"},
+  { title: "Services", path: "#services" },
   { title: "Key Metrics", path: "#key-metrics" },
   { title: "Projects", path: "#projects" },
   { title: "Tech Stack", path: "#tech-stack" },
@@ -46,10 +50,34 @@ export const navLinks = [
 export const projects = [
   {
     id: 1,
+    title: "Personal Portfolio",
+    description:
+      "A modern developer portfolio built with Next.js 15, React, Tailwind CSS, DaisyUI, and Framer Motion. Showcases projects and skills with sleek animations and a responsive design.",
+    image: "/assets/portfolio.png",
+    link: "https://dev-portfolio-one-swart.vercel.app/",
+    techStack: [
+      { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
+      { name: "React", icon: FaReact, color: ICON_COLORS.React },
+      {
+        name: "Tailwind",
+        icon: RiTailwindCssFill,
+        color: ICON_COLORS.Tailwind,
+      },
+      {
+        name: "Framer Motion",
+        icon: SiFramer,
+        color: ICON_COLORS.FramerMotion,
+      },
+      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
+    ],
+  },
+
+  {
+    id: 2,
     title: "E-Commerce",
     description:
       "A feature-rich e-commerce platform with dynamic cart functionality, product listing, and detail pages powered by Sanity CMS. Integrated with Stripe for secure and seamless payment processing.",
-    image: "/assets/Screenshot 2024-12-09 134236.png",
+    image: "/assets/ecommerce.png",
     link: "https://buttercream-dream.vercel.app/",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
@@ -64,32 +92,13 @@ export const projects = [
       { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
     ],
   },
-  {
-    id: 2,
-    title: "iPhone 15 Clone",
-    description:
-      "A visually stunning clone of the iPhone 15 website using GSAP and Three.js for interactive 3D animations and graphics, delivering a sleek and immersive user experience.",
-    image: "/assets/iphone1.png",
-    link: "https://iphone-website-pi.vercel.app/",
-    techStack: [
-      { name: "Vite", icon: SiVite, color: ICON_COLORS.Vite },
-      { name: "React", icon: FaReact, color: ICON_COLORS.React },
-      { name: "Three.js", icon: TbBrandThreejs, color: ICON_COLORS.ThreeJS },
-      {
-        name: "Tailwind",
-        icon: RiTailwindCssFill,
-        color: ICON_COLORS.Tailwind,
-      },
-      { name: "Sentry", icon: SiSentry, color: ICON_COLORS.Sentry },
-      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
-    ],
-  },
+
   {
     id: 3,
     title: "Kittenz",
     description:
       "A fun and interactive web app that fetches random kitten photos from the CatAPI. Includes a dynamic matching game to test your memory and love for kittens.",
-    image: "/assets/kittenz1.png",
+    image: "/assets/kittenz.png",
     link: "https://kittenz-theta.vercel.app/",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
@@ -102,8 +111,33 @@ export const projects = [
       { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
     ],
   },
+
   {
     id: 4,
+    title: "YC Directory",
+    description:
+      "A robust directory app allowing entrepreneurs to search for and explore popular startups. Includes features for user profile creation, startup submissions, and content management powered by Sanity CMS.",
+    image: "/assets/startups.png",
+    link: "https://yc-directory-eta-henna.vercel.app/",
+    techStack: [
+      { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
+      { name: "React", icon: FaReact, color: ICON_COLORS.React },
+      {
+        name: "Tailwind",
+        icon: RiTailwindCssFill,
+        color: ICON_COLORS.Tailwind,
+      },
+      {
+        name: "Framer Motion",
+        icon: SiFramer,
+        color: ICON_COLORS.FramerMotion,
+      },
+      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
+    ],
+  },
+
+  {
+    id: 5,
     title: "Taskify",
     description:
       "A versatile task management app with smooth animations powered by Framer Motion. Features include task creation, editing, and deletion, with a focus on usability and innovation.",
@@ -125,49 +159,24 @@ export const projects = [
       { name: "Firebase", icon: SiFirebase, color: ICON_COLORS.Firebase },
     ],
   },
-  {
-    id: 5,
-    title: "Personal Portfolio",
-    description:
-      "A modern developer portfolio built with Next.js 15, React, Tailwind CSS, DaisyUI, and Framer Motion. Showcases projects and skills with sleek animations and a responsive design.",
-    image: "/assets/todo1.png",
-    link: "https://react-todo-beta-three.vercel.app/",
-    techStack: [
-      { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
-      { name: "React", icon: FaReact, color: ICON_COLORS.React },
-      {
-        name: "Tailwind",
-        icon: RiTailwindCssFill,
-        color: ICON_COLORS.Tailwind,
-      },
-      {
-        name: "Framer Motion",
-        icon: SiFramer,
-        color: ICON_COLORS.FramerMotion,
-      },
-      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
-    ],
-  },
+
   {
     id: 6,
-    title: "YC Directory",
+    title: "iPhone 15 Clone",
     description:
-      "A robust directory app allowing entrepreneurs to search for and explore popular startups. Includes features for user profile creation, startup submissions, and content management powered by Sanity CMS.",
-    image: "/assets/todo1.png",
-    link: "https://react-todo-beta-three.vercel.app/",
+      "A visually stunning clone of the iPhone 15 website using GSAP and Three.js for interactive 3D animations and graphics, delivering a sleek and immersive user experience.",
+    image: "/assets/iphone15.png",
+    link: "https://iphone-website-pi.vercel.app/",
     techStack: [
-      { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
+      { name: "Vite", icon: SiVite, color: ICON_COLORS.Vite },
       { name: "React", icon: FaReact, color: ICON_COLORS.React },
+      { name: "Three.js", icon: TbBrandThreejs, color: ICON_COLORS.ThreeJS },
       {
         name: "Tailwind",
         icon: RiTailwindCssFill,
         color: ICON_COLORS.Tailwind,
       },
-      {
-        name: "Framer Motion",
-        icon: SiFramer,
-        color: ICON_COLORS.FramerMotion,
-      },
+      { name: "Sentry", icon: SiSentry, color: ICON_COLORS.Sentry },
       { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
     ],
   },
@@ -279,8 +288,7 @@ export const metrics = [
     id: 3,
     value: "99%",
     title: "Code Quality",
-    description:
-      "Clean, efficient code",
+    description: "Clean, efficient code",
     icon: SiGoogleanalytics,
   },
   {
@@ -325,39 +333,45 @@ export const services = [
     id: 1,
     title: "Custom Web Apps",
     image: "/assets/custom_web_development.png",
-    description: "I build tailored websites and web applications, including scalable CMS and Progressive Web Apps, designed to meet your unique needs.",  
+    description:
+      "I build tailored websites and web applications, including scalable CMS and Progressive Web Apps, designed to meet your unique needs.",
   },
   {
     id: 2,
     title: "E-Commerce Solutions",
     image: "/assets/ecommerce_solutions.png",
-    description: "From intuitive storefronts to secure payment integration, I create e-commerce platforms that drive sales and deliver seamless user experiences.", 
+    description:
+      "From intuitive storefronts to secure payment integration, I create e-commerce platforms that drive sales and deliver seamless user experiences.",
   },
   {
     id: 3,
     title: "Website Optimization & Maintenance",
     image: "/assets/website_optimization_maintenance.png",
-    description: "I enhance website speed, performance, and reliability while providing ongoing updates to keep your site running smoothly.",
+    description:
+      "I enhance website speed, performance, and reliability while providing ongoing updates to keep your site running smoothly.",
   },
   {
     id: 4,
     title: "Interactive UX/UI Design",
     image: "/assets/ux_ui_interactive_design.png",
-    description: "I design intuitive, visually engaging interfaces that prioritize user experience and adapt seamlessly across all devices.",
+    description:
+      "I design intuitive, visually engaging interfaces that prioritize user experience and adapt seamlessly across all devices.",
   },
 
   {
     id: 5,
     title: "SEO & Digital Marketing",
     image: "/assets/seo_digital_marketing.png",
-    description: "Boost your online presence with targeted SEO strategies, engaging content, and effective digital marketing solutions.",
+    description:
+      "Boost your online presence with targeted SEO strategies, engaging content, and effective digital marketing solutions.",
   },
 
   {
     id: 6,
     title: "API & Third-Party Integrations",
     image: "/assets/api_third_party_integration.png",
-    description: "I connect your systems with custom APIs and third-party tools, ensuring seamless functionality and enhanced efficiency.",
+    description:
+      "I connect your systems with custom APIs and third-party tools, ensuring seamless functionality and enhanced efficiency.",
   },
 ];
 
