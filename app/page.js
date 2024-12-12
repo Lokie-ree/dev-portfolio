@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ContactSection,
   Hero,
@@ -13,9 +15,9 @@ export default function Home() {
       {" "}
       <Hero />
       <Services />
-      <KeyMetrics />
       <Portfolio />
       <Stack />
+      <KeyMetrics />
       <ContactSection />
     </div>
   );

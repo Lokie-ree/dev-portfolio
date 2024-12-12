@@ -16,7 +16,7 @@ const Portfolio = () => {
       id="projects"
       className="py-20 lg:py-24 portfolio-bg text-base-content"
     >
-      <div className="container max-w-4xl mx-auto px-6">
+      <div className="container max-w-4xl mx-auto px-3">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
           Projects
         </h2>
@@ -25,7 +25,7 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="perspective w-full h-64 relative"
+              className="perspective max-w-md h-64 relative"
               aria-label={`Project: ${project.title}`}
               onClick={() => toggleFlip(project.id)}
             >

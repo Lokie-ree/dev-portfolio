@@ -25,7 +25,7 @@ const Stack = () => {
               >
                 <item.icon className="w-full h-full" />
               </div>
-              <span className="text-sm sm:text-md font-semibold text-base-content mt-2 group-hover:text-accent">
+              <span className="text-sm sm:text-md font-semibold text-base-content mt-2">
                 {item.name}
               </span>
             </div>
