@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SocialButtons from "./SocialButtons";
@@ -10,12 +9,14 @@ import { navLinks, socialButtons } from "@/utils/constants";
 const MobileMenu = ({ isOpen, closeMenu }) => {
   return (
     <motion.div
-      className={`fixed inset-0 bg-base-300/90 z-50 backdrop-blur-3xl flex flex-col justify-center items-center transform transition-transform duration-300 ${
-        isOpen ? "translate-x-0" : "-translate-x-full"
-      }`}
+      initial={{ x: "100%" }}
+      animate={{ x: isOpen ? "0%" : "100%" }}
+      exit={{ x: "100%" }}
+      transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
+      className="fixed inset-0  backdrop-blur-md bg-base-200 z-50 flex flex-col justify-center items-center"
     >
       {/* Navigation Links */}
-      <ul className="mt-16 space-y-6 text-center text-xl sm:text-2xl">
+      <ul className="space-y-6 text-center text-xl sm:text-2xl">
         {navLinks.map(({ path, title }, index) => (
           <li key={index}>
             <Link
@@ -30,7 +31,7 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
       </ul>
 
       {/* Social Buttons and Theme Controller */}
-      <div className="mt-8 flex flex-col items-center space-y-4">
+      <div className="mt-10 flex flex-col items-center space-y-4">
         <SocialButtons buttons={socialButtons} iconClass="w-8 h-8" />
         <ThemeController />
       </div>

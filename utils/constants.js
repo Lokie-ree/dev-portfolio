@@ -9,11 +9,14 @@ import {
   FaDiagramProject,
   FaRocket,
   FaUsers,
+  FaBriefcase,
 } from "react-icons/fa6";
 import {
   RiNextjsLine,
   RiTailwindCssFill,
   RiUploadCloudFill,
+  RiHome4Fill,
+  RiToolsFill,
 } from "react-icons/ri";
 import {
   SiSanity,
@@ -27,7 +30,7 @@ import {
   SiGoogleanalytics,
   SiPagespeedinsights,
 } from "react-icons/si";
-import { TbBrandThreejs } from "react-icons/tb";
+import { TbBrandThreejs, TbMailFilled } from "react-icons/tb";
 
 import { ICON_COLORS } from "./colors";
 
@@ -39,12 +42,15 @@ export const themes = {
 };
 
 export const navLinks = [
-  { title: "Home", path: "#home" },
-  { title: "Services", path: "#services" },
-  { title: "Key Metrics", path: "#key-metrics" },
-  { title: "Projects", path: "#projects" },
+  { title: "Home", path: "/", icon: RiHome4Fill },
+  { title: "Projects", path: "#portfolio", icon: FaBriefcase },
+  { title: "Services", path: "services", icon: RiToolsFill },
+  { title: "Contact", path: "#contact", icon: TbMailFilled },
+];
+
+export const footerLinks = [
   { title: "Tech Stack", path: "#tech-stack" },
-  { title: "Contact", path: "#contact" },
+  { title: "Key Metrics", path: "#metrics" },
 ];
 
 export const projects = [

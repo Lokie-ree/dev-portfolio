@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import { useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
-import { navLinks, socialButtons } from "@/utils/constants";
 import { motion } from "framer-motion";
 import ThemeController from "./ThemeController";
-import SocialButtons from "./SocialButtons";
 import MobileMenu from "./MobileMenu";
 import Logo from "./Logo";
 import DesktopMenu from "./DesktopMenu";
@@ -37,9 +34,16 @@ const Navbar = () => {
         onClick={toggleNav}
         aria-expanded={nav}
         aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
-        className="md:hidden z-[100] bg-base-100 border border-primary rounded-full p-3 shadow-sm hover:shadow-lg transition-transform"
+        className="md:hidden z-[100] bg-base-100 border border-primary rounded-xl p-2 shadow-sm hover:shadow-lg transition-transform"
       >
-        {nav ? <MdClose size={24} /> : <MdMenu size={24} />}
+        <motion.div
+          initial={{ rotate: 0 }}
+          animate={{ rotate: nav ? 90 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="flex justify-center items-center"
+        >
+          {nav ? <MdClose size={24} /> : <MdMenu size={24} />}
+        </motion.div>
       </button>
       {/* Mobile Menu */}
       <MobileMenu isOpen={nav} closeMenu={closeNav} />
