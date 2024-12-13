@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { projects } from "@/utils/constants";
 
-const Portfolio = () => {
+const Projects = () => {
   const [flippedCard, setFlippedCard] = useState(null);
 
   const toggleFlip = (id) => {
@@ -14,18 +14,18 @@ const Portfolio = () => {
   return (
     <section
       id="projects"
-      className="py-20 lg:py-24 portfolio-bg text-base-content"
+      className="py-20 lg:py-24 border-t border-t-primary portfolio-bg text-base-content"
     >
-      <div className="container max-w-4xl mx-auto px-3">
+      <div className="container max-w-4xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
           Projects
         </h2>
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="perspective max-w-md h-64 relative"
+              className="perspective max-w-md h-64 hover:border-2 rounded-2xl hover:border-accent relative"
               aria-label={`Project: ${project.title}`}
               onClick={() => toggleFlip(project.id)}
             >
@@ -85,4 +85,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;

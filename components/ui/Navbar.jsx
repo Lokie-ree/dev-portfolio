@@ -34,7 +34,7 @@ const Navbar = () => {
         onClick={toggleNav}
         aria-expanded={nav}
         aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
-        className="md:hidden z-[100] bg-base-100 border border-primary rounded-xl p-2 shadow-sm hover:shadow-lg transition-transform"
+        className="md:hidden z-[100] bg-base-100 border border-primary rounded-xl p-1 shadow-sm hover:shadow-lg transition-transform"
       >
         <motion.div
           initial={{ rotate: 0 }}

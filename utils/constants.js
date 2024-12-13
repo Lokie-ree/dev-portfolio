@@ -41,16 +41,25 @@ export const themes = {
   dark: "night",
 };
 
-export const navLinks = [
-  { title: "Home", path: "/", icon: RiHome4Fill },
-  { title: "Projects", path: "#portfolio", icon: FaBriefcase },
-  { title: "Services", path: "services", icon: RiToolsFill },
-  { title: "Contact", path: "#contact", icon: TbMailFilled },
+export const desktopLinks = [
+  { title: "Home", path: "/" },
+  { title: "Services", path: "#services" },
+  { title: "Projects", path: "#projects" },
+  { title: "Contact", path: "#contact" },
+];
+
+export const mobileLinks = [
+  { title: "Home", path: "/" },
+  { title: "Services", path: "#services" },
+  { title: "Projects", path: "#projects" },
+  { title: "Contact", path: "#contact" },
+  { title: "Tech Stack", path: "#tech-stack" },
+  { title: "Key Metrics", path: "#key-metrics" },
 ];
 
 export const footerLinks = [
   { title: "Tech Stack", path: "#tech-stack" },
-  { title: "Key Metrics", path: "#metrics" },
+  { title: "Key Metrics", path: "#key-metrics" },
 ];
 
 export const projects = [

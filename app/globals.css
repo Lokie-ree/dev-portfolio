@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -52,7 +53,6 @@ html, body {
 }
 
 @layer utilities {
-
   .nav-link {
     @apply font-medium text-base-content hover:text-primary transition-colors duration-300;
   }
@@ -60,7 +60,7 @@ html, body {
   .fixed-menu {
     @apply fixed inset-0 h-full w-full bg-red-500;
   }
-  
+
   .nav-bg {
     @apply bg-base-300 shadow-md;
   }
@@ -100,14 +100,6 @@ html, body {
     @apply hover:shadow-2xl hover:scale-105 hover:border hover:border-accent;
   }
 
-  .portfolio-expanded {
-    @apply transition-all duration-300 ease-in-out max-h-0 overflow-hidden;
-  }
-
-  .portfolio-expanded-open {
-    @apply max-h-screen p-4;
-  }
-
   .card-hover {
     @apply hover:shadow-2xl hover:scale-105 hover:border hover:border-accent transition-transform duration-300;
   }
@@ -115,7 +107,7 @@ html, body {
   .card-style {
     @apply bg-base-100 bg-gradient-to-br from-white/10 to-transparent shadow-xl rounded-xl;
   }
-  
+
   .glass {
     @apply bg-gradient-to-br from-white/10 to-transparent backdrop-blur-lg border border-white/20 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.37)];
   }
@@ -133,10 +125,10 @@ html, body {
   }
 
   .toast-success {
-    @apply bg-success text-success-content
+    @apply bg-success text-success-content;
   }
 
   .toast-error {
-    @apply bg-error text-error-content
+    @apply bg-error text-error-content;
   }
 }

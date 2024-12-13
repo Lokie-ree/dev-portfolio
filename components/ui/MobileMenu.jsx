@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import SocialButtons from "./SocialButtons";
 import ThemeController from "./ThemeController";
-import { navLinks, socialButtons } from "@/utils/constants";
+import { mobileLinks, socialButtons } from "@/utils/constants";
 
 const MobileMenu = ({ isOpen, closeMenu }) => {
   return (
@@ -16,8 +16,8 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
       className="fixed inset-0  backdrop-blur-md bg-base-200 z-50 flex flex-col justify-center items-center"
     >
       {/* Navigation Links */}
-      <ul className="space-y-6 text-center text-xl sm:text-2xl">
-        {navLinks.map(({ path, title }, index) => (
+      <ul className="space-y-6 text-center text-xl">
+        {mobileLinks.map(({ path, title }, index) => (
           <li key={index}>
             <Link
               href={path}

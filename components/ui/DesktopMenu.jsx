@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { navLinks } from "@/utils/constants";
+import { desktopLinks } from "@/utils/constants";
 
 const DesktopMenu = () => {
   return (
     <ul className="hidden md:flex space-x-10">
-      {navLinks.map(({ path, title }, index) => (
+      {desktopLinks.map(({ path, title }, index) => (
         <li key={index} className="flex items-center space-x-2 hover:scale-110">
           <Link
             href={path}

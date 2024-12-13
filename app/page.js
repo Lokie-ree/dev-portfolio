@@ -4,9 +4,9 @@ import {
   ContactSection,
   Hero,
   KeyMetrics,
-  Portfolio,
+  Projects,
   Services,
-  Stack,
+  TechStack,
 } from "@/components/sections";
 
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
       {" "}
       <Hero />
       <Services />
-      <Portfolio />
-      <Stack />
+      <Projects />
+      <TechStack />
       <KeyMetrics />
       <ContactSection />
     </div>
