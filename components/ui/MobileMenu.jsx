@@ -13,7 +13,7 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
       animate={{ x: isOpen ? "0%" : "100%" }}
       exit={{ x: "100%" }}
       transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
-      className="fixed inset-0  backdrop-blur-md bg-base-200 z-50 flex flex-col justify-center items-center"
+      className="fixed inset-0 mobile-menu-bg bg-base-100 backdrop-blur-lg z-50 flex flex-col justify-center items-center"
     >
       {/* Navigation Links */}
       <ul className="space-y-6 text-center text-xl">

@@ -65,6 +65,10 @@ body {
     @apply bg-base-300 shadow-md;
   }
 
+  .mobile-menu-bg {
+    @apply bg-gradient-to-br from-primary/70 via-secondary/50 to-accent/50;
+  }
+
   .hero-bg {
     @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20;
   }
