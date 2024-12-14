@@ -15,12 +15,12 @@ const ProjectCarousel = () => {
     <>
       {/* Carousel */}
       <div className="flex justify-center items-center px-4">
-        <div className="carousel w-full overflow-hidden gap-4">
+        <div className="carousel w-full overflow-hidden">
           {projects.map((project, index) => (
             <div
               id={`item${index + 1}`}
               key={project.id}
-              className="carousel-item w-full max-w-md flex-shrink-0"
+              className="carousel-item w-full max-w-md"
             >
               <ProjectCard
                 project={project}

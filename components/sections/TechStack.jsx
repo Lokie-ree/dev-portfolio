@@ -13,11 +13,12 @@ const TechStack = () => {
         <h2 className="text-5xl md:text-6xl text-base-content font-bold mb-12">
           Tech Stack
         </h2>
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-12">
           {stackItems.map((item, index) => (
             <div
               key={index}
-              className="relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-20 h-20 sm:w-28 sm:h-28 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl card-hover"
+              className="tooltip tooltip-bottom tooltip-accent relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-20 h-20 sm:w-28 sm:h-28 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl card-hover"
+              data-tip={item.name}
             >
               <div
                 className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center"
@@ -25,7 +26,6 @@ const TechStack = () => {
               >
                 <item.icon className="w-full h-full" />
               </div>
-              <span className="text-sm sm:text-md font-semibold text-base-content"></span>
             </div>
           ))}
         </div>

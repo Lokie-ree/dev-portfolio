@@ -9,6 +9,8 @@ import {
   TechStack,
 } from "@/components/sections";
 
+import Dev from "@/components/sections/Dev";
+
 export default function Home() {
   return (
     <div>
@@ -16,6 +18,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Projects />
+      <Dev />
       <TechStack />
       <KeyMetrics />
       <ContactSection />

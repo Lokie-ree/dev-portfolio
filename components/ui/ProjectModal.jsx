@@ -6,7 +6,7 @@ import Link from "next/link";
 const ProjectModal = ({ project, onClose }) => {
   return (
     <div
-      className="modal modal-open flex items-center justify-center bg-black/50"
+      className="modal modal-open flex items-end justify-center bg-black/50"
       onClick={onClose}
     >
       <div
