@@ -5,9 +5,12 @@ import Link from "next/link";
 
 const ProjectModal = ({ project, onClose }) => {
   return (
-    <div className="modal modal-open" onClick={onClose}>
+    <div
+      className="modal modal-open flex items-center justify-center bg-black/50"
+      onClick={onClose}
+    >
       <div
-        className="modal-box relative max-w-2xl"
+        className="modal-box relative max-w-md bg-base-100 text-base-content shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -16,20 +19,14 @@ const ProjectModal = ({ project, onClose }) => {
         >
           <MdClose />
         </button>
-        <figure>
-          <img
-            src={project.image}
-            alt={project.title}
-            className="object-cover w-full rounded-md"
-          />
-        </figure>
-        <h3 className="font-bold text-xl text-primary mt-4">{project.title}</h3>
-        <p className="py-4 font-medium">{project.description}</p>
+        <h3 className="font-bold text-lg text-primary">{project.title}</h3>
+        <p className="py-4 font-light">{project.description}</p>
+
         <div className="flex gap-4 mt-2">
           {project.techStack.map((tech, index) => (
             <tech.icon
               key={index}
-              className="w-6 h-6"
+              className="w-5 h-5"
               style={{ color: tech.color }}
             />
           ))}

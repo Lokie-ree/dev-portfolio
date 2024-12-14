@@ -14,13 +14,13 @@ const ProjectCarousel = () => {
   return (
     <>
       {/* Carousel */}
-      <div className="flex justify-center items-center">
-        <div className="carousel w-full">
+      <div className="flex justify-center items-center px-4">
+        <div className="carousel w-full overflow-hidden gap-4">
           {projects.map((project, index) => (
             <div
               id={`item${index + 1}`}
               key={project.id}
-              className="carousel-item w-full max-w-md mx-auto"
+              className="carousel-item w-full max-w-md flex-shrink-0"
             >
               <ProjectCard
                 project={project}
@@ -34,9 +34,21 @@ const ProjectCarousel = () => {
       {/* Carousel Buttons */}
       <div className="flex w-full justify-center gap-2 py-4">
         {projects.map((_, index) => (
-          <Link href={`#item${index + 1}`} key={index} className="btn btn-xs">
+          <button
+            key={index}
+            className="btn btn-xs"
+            onClick={() => {
+              document
+                .querySelectorAll(".carousel-item")
+                [index]?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                  inline: "center",
+                });
+            }}
+          >
             {index + 1}
-          </Link>
+          </button>
         ))}
       </div>
 

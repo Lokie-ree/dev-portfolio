@@ -9,14 +9,11 @@ import {
   FaDiagramProject,
   FaRocket,
   FaUsers,
-  FaBriefcase,
 } from "react-icons/fa6";
 import {
   RiNextjsLine,
   RiTailwindCssFill,
   RiUploadCloudFill,
-  RiHome4Fill,
-  RiToolsFill,
 } from "react-icons/ri";
 import {
   SiSanity,
@@ -30,11 +27,9 @@ import {
   SiGoogleanalytics,
   SiPagespeedinsights,
 } from "react-icons/si";
-import { TbBrandThreejs, TbMailFilled } from "react-icons/tb";
+import { TbBrandThreejs } from "react-icons/tb";
 
 import { ICON_COLORS } from "./colors";
-
-export const TOP_COLORS = ["#30A2F2", "#1E67C6", "#076AF5", "#0F39F5"];
 
 export const themes = {
   light: "nord",

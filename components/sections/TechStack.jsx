@@ -13,21 +13,19 @@ const TechStack = () => {
         <h2 className="text-5xl md:text-6xl text-base-content font-bold mb-12">
           Tech Stack
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-8">
           {stackItems.map((item, index) => (
             <div
               key={index}
-              className="relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-32 h-32 sm:w-40 sm:h-40 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl card-hover"
+              className="relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-20 h-20 sm:w-28 sm:h-28 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl card-hover"
             >
               <div
-                className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center"
+                className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center"
                 style={{ color: item.color }}
               >
                 <item.icon className="w-full h-full" />
               </div>
-              <span className="text-sm sm:text-md font-semibold text-base-content mt-2">
-                {item.name}
-              </span>
+              <span className="text-sm sm:text-md font-semibold text-base-content"></span>
             </div>
           ))}
         </div>

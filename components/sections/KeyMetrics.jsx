@@ -17,7 +17,7 @@ const KeyMetrics = () => {
               key={metric.id}
               className="stat card-style card-hover w-full sm:max-w-md"
             >
-              <div className="stat-value text-3xl sm:text-4xl flex items-center justify-between text-primary font-bold">
+              <div className="stat-value text-2xl sm:text-3xl flex items-center justify-between text-primary font-bold">
                 {metric.value}
                 <div className="stat-figure text-primary">
                   <metric.icon
@@ -27,11 +27,11 @@ const KeyMetrics = () => {
                 </div>
               </div>
 
-              <div className="stat-title text-2xl md:text-3xl text-secondary font-semibold sm:mt-2 sm:mb-2">
+              <div className="stat-title text-xl md:text-2xl text-secondary font-semibold sm:mt-2 sm:mb-2">
                 {metric.title}
               </div>
 
-              <div className="stat-desc text-lg text-base-content mt-1 truncate">
+              <div className="stat-desc text-md text-base-content mt-1 truncate">
                 {metric.description}
               </div>
             </div>
