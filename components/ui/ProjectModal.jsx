@@ -10,7 +10,7 @@ const ProjectModal = ({ project, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="modal-box relative max-w-md bg-base-100 text-base-content shadow-xl"
+        className="modal-box relative max-w-sm bg-base-100 text-base-content shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
