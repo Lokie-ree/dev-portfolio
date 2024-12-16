@@ -5,12 +5,14 @@ import { projects } from "@/utils/constants";
 import { IoChevronBackCircle, IoChevronForwardCircle } from "react-icons/io5";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
+import { useCarouselAutoplay, useCarouselSwiping } from "@/utils/carouselUtils";
 
 const ProjectCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalProjects = projects.length;
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const totalProjects = projects.length;
+  const [currentIndex, setCurrentIndex, hoverHandlers] =
+    useCarouselAutoplay(totalProjects);
 
   const prevSlide = () => {
     setCurrentIndex((currentIndex - 1 + totalProjects) % totalProjects);
@@ -24,8 +26,14 @@ const ProjectCarousel = () => {
     setSelectedProject(project);
   };
 
+  const handlers = useCarouselSwiping(prevSlide, nextSlide);
+
   return (
-    <div className="flex items-center justify-center px-4 sm:px-12">
+    <div
+      {...handlers}
+      {...hoverHandlers}
+      className="flex items-center justify-center px-4 sm:px-12"
+    >
       <section className="card card-compact w-full max-w-xl bg-base-100 shadow-xl rounded-xl mx-auto">
         <div className="card-body">
           <div className="carousel relative w-full overflow-hidden rounded-box shadow-xl">
@@ -39,7 +47,7 @@ const ProjectCarousel = () => {
           </div>
 
           {/* Controls: Buttons & Dots */}
-          <div className="flex items-center justify-between gap-4 mt-6 sm:px-8 md:px-12">
+          <div className="flex items-center justify-center gap-4 mt-6 sm:px-8 md:px-12">
             {/* Previous Button */}
             <button
               className="btn btn-circle btn-primary btn-sm opacity-75 hover:opacity-100 transition-all duration-300"
