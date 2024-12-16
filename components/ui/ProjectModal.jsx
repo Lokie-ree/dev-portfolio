@@ -10,11 +10,11 @@ const ProjectModal = ({ project, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="modal-box relative max-w-sm bg-base-100 text-base-content shadow-xl"
+        className="modal-box relative max-w-md bg-base-100 text-base-content shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="btn btn-sm btn-circle absolute right-2 top-2"
+          className="btn btn-sm btn-circle btn-secondary absolute right-5 top-5"
           onClick={onClose}
         >
           <MdClose />
@@ -35,7 +35,7 @@ const ProjectModal = ({ project, onClose }) => {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary btn-md mt-6"
+          className="btn btn-primary w-full mt-6"
         >
           View Live Project <FaExternalLinkAlt className="ml-2" />
         </Link>

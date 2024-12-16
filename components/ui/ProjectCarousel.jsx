@@ -25,47 +25,52 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-4">
-      <section className="card card-compact w-full sm:w-1/2 bg-base-100 shadow-xl rounded-xl">
+    <div className="flex items-center justify-center px-4 sm:px-12">
+      <section className="card card-compact w-full max-w-xl bg-base-100 shadow-xl rounded-xl mx-auto">
         <div className="card-body">
-          <div className="carousel relative rounded-box shadow-xl">
+          <div className="carousel relative w-full overflow-hidden rounded-box shadow-xl">
             {/* Carousel Item */}
-            <div className="carousel-item w-full">
+            <div className="carousel-item w-full max-w-lg mx-auto">
               <ProjectCard
                 project={projects[currentIndex]}
                 onViewDetails={() => handleViewDetails(projects[currentIndex])}
               />
             </div>
+          </div>
 
-            {/* Navigation Buttons */}
+          {/* Controls: Buttons & Dots */}
+          <div className="flex items-center justify-between gap-4 mt-6 sm:px-8 md:px-12">
+            {/* Previous Button */}
             <button
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 btn btn-circle btn-accent btn-sm opacity-75 hover:opacity-100 transition-all duration-300"
+              className="btn btn-circle btn-primary btn-sm opacity-75 hover:opacity-100 transition-all duration-300"
               onClick={prevSlide}
               aria-label="Previous Slide"
             >
               <IoChevronBackCircle size={24} />
             </button>
+
+            {/* Dots Navigation */}
+            <div className="flex justify-center gap-2">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-3 h-3 sm:w-5 sm:h-5 rounded-full transition-colors duration-300 ${
+                    index === currentIndex ? "bg-primary" : "bg-neutral"
+                  }`}
+                  onClick={() => setCurrentIndex(index)}
+                  aria-label={`Go to project ${index + 1}`}
+                ></button>
+              ))}
+            </div>
+
+            {/* Next Button */}
             <button
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-circle btn-accent btn-sm opacity-75 hover:opacity-100 transition-all duration-300"
+              className="btn btn-circle btn-primary btn-sm opacity-75 hover:opacity-100 transition-all duration-300"
               onClick={nextSlide}
               aria-label="Next Slide"
             >
               <IoChevronForwardCircle size={24} />
             </button>
-          </div>
-
-          {/* Dots Navigation */}
-          <div className="flex justify-center mt-4">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                className={`mx-1 mt-1 md:mx-2 md:mt-3 w-4 h-4 md:w-6 md:h-6 rounded-full ${
-                  index === currentIndex ? "bg-primary" : "bg-neutral"
-                }`}
-                onClick={() => setCurrentIndex(index)}
-                aria-label={`Go to project ${index + 1}`}
-              ></button>
-            ))}
           </div>
 
           {/* Modal */}

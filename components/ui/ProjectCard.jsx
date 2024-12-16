@@ -1,23 +1,29 @@
 import React from "react";
+import Image from "next/image";
 
 const ProjectCard = ({ project, onViewDetails }) => {
   return (
     <>
-      <div className="card card-compact h-[24rem] project-card shadow-md">
-        <figure className="h-[14rem] w-full">
-          <img
+      <div className="card card-compact shadow-md w-full aspect-[4/3] mx-auto">
+        <figure className="relative h-full">
+          <Image
             src={project.image}
             alt={project.title}
-            className="object-cover w-full h-full rounded-t-md"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-xl"
           />
         </figure>
+
         <div className="card-body flex flex-col items-center text-center p-4">
-          <h2 className="card-title text-primary text-xl">{project.title}</h2>
-          <div className="flex justify-center gap-4 mt-2">
+          <h2 className="card-title text-primary text-xl sm:text-2xl">
+            {project.title}
+          </h2>
+          <div className="flex justify-center gap-4 sm:mt-2">
             {project.techStack.map((tech, index) => (
               <tech.icon
                 key={index}
-                className="w-5 h-5"
+                className="w-5 h-5 sm:w-6 sm:h-6 mb-2 sm:mb-4"
                 style={{ color: tech.color }}
               />
             ))}

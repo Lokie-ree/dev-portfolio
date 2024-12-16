@@ -151,7 +151,7 @@ export const projects = [
     title: "Taskify",
     description:
       "A versatile task management app with smooth animations powered by Framer Motion. Features include task creation, editing, and deletion, with a focus on usability and innovation.",
-    image: "/assets/todo1.png",
+    image: "/assets/taskify.png",
     link: "https://react-todo-beta-three.vercel.app/",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
