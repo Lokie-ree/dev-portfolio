@@ -11,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <div>
+    <main>
       {" "}
       <Hero />
       <Services />
@@ -19,6 +19,6 @@ export default function Home() {
       <TechStack />
       <KeyMetrics />
       <ContactSection />
-    </div>
+    </main>
   );
 }

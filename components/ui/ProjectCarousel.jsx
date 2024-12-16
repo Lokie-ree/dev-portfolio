@@ -5,7 +5,7 @@ import { projects } from "@/utils/constants";
 import { IoChevronBackCircle, IoChevronForwardCircle } from "react-icons/io5";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
-import { useCarouselAutoplay, useCarouselSwiping } from "@/utils/carouselUtils";
+import { useCarouselAutoplay, useCarouselSwiping } from "@/utils/carousel";
 
 const ProjectCarousel = () => {
   const totalProjects = projects.length;
@@ -34,7 +34,7 @@ const ProjectCarousel = () => {
       {...hoverHandlers}
       className="flex items-center justify-center px-4 sm:px-12"
     >
-      <section className="card card-compact w-full max-w-xl bg-base-100 shadow-xl rounded-xl mx-auto">
+      <section className="card card-compact card-hover w-full max-w-xl bg-base-100 shadow-xl rounded-xl mx-auto">
         <div className="card-body">
           <div className="carousel relative w-full overflow-hidden rounded-box shadow-xl">
             {/* Carousel Item */}
@@ -62,7 +62,7 @@ const ProjectCarousel = () => {
               {projects.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 sm:w-5 sm:h-5 rounded-full transition-colors duration-300 ${
+                  className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full transition-colors duration-300 ${
                     index === currentIndex ? "bg-primary" : "bg-neutral"
                   }`}
                   onClick={() => setCurrentIndex(index)}

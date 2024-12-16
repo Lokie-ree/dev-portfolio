@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { stackItems } from "../../utils/constants";
 
 const TechStack = () => {
@@ -17,11 +16,11 @@ const TechStack = () => {
           {stackItems.map((item, index) => (
             <div
               key={index}
-              className="tooltip tooltip-bottom tooltip-accent relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-20 h-20 sm:w-28 sm:h-28 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl card-hover"
+              className="tooltip tooltip-bottom card-hover tooltip-accent relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-20 h-20 sm:w-28 sm:h-28 gap-2 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl"
               data-tip={item.name}
             >
               <div
-                className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center"
+                className="size-8 sm:size-12 flex items-center justify-center"
                 style={{ color: item.color }}
               >
                 <item.icon className="w-full h-full" />
