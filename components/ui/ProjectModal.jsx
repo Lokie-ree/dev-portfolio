@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaLaptopCode, FaCode } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import Link from "next/link";
 
@@ -31,14 +31,24 @@ const ProjectModal = ({ project, onClose }) => {
             />
           ))}
         </div>
-        <Link
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary w-full mt-6"
-        >
-          View Live Project <FaExternalLinkAlt className="ml-2" />
-        </Link>
+        <div className="flex flex-row justify-center items-center gap-4">
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary mt-6"
+          >
+            Live Project <FaLaptopCode className="ml-2 size-5" />
+          </Link>
+          <Link
+            href={project.code}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary mt-6"
+          >
+            Source Code <FaCode className="ml-2 size-5" />
+          </Link>
+        </div>
       </div>
     </div>
   );

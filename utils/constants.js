@@ -65,6 +65,7 @@ export const projects = [
       "A modern developer portfolio built with Next.js 15, React, Tailwind CSS, DaisyUI, and Framer Motion. Showcases projects and skills with sleek animations and a responsive design.",
     image: "/assets/portfolio.png",
     link: "https://dev-portfolio-one-swart.vercel.app/",
+    code: "https://github.com/Lokie-ree/dev-portfolio",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
       { name: "React", icon: FaReact, color: ICON_COLORS.React },
@@ -89,6 +90,7 @@ export const projects = [
       "A feature-rich e-commerce platform with dynamic cart functionality, product listing, and detail pages powered by Sanity CMS. Integrated with Stripe for secure and seamless payment processing.",
     image: "/assets/ecommerce.png",
     link: "https://buttercream-dream.vercel.app/",
+    code: "https://github.com/Lokie-ree/buttercream-dream",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
       { name: "React", icon: FaReact, color: ICON_COLORS.React },
@@ -110,6 +112,7 @@ export const projects = [
       "A fun and interactive web app that fetches random kitten photos from the CatAPI. Includes a dynamic matching game to test your memory and love for kittens.",
     image: "/assets/kittenz.png",
     link: "https://kittenz-theta.vercel.app/",
+    code: "https://github.com/Lokie-ree/kittenz",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
       { name: "React", icon: FaReact, color: ICON_COLORS.React },
@@ -129,6 +132,7 @@ export const projects = [
       "A robust directory app allowing entrepreneurs to search for and explore popular startups. Includes features for user profile creation, startup submissions, and content management powered by Sanity CMS.",
     image: "/assets/startups.png",
     link: "https://yc-directory-eta-henna.vercel.app/",
+    code: "https://github.com/Lokie-ree/yc-directory",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
       { name: "React", icon: FaReact, color: ICON_COLORS.React },
@@ -148,35 +152,12 @@ export const projects = [
 
   {
     id: 5,
-    title: "Taskify",
-    description:
-      "A versatile task management app with smooth animations powered by Framer Motion. Features include task creation, editing, and deletion, with a focus on usability and innovation.",
-    image: "/assets/taskify.png",
-    link: "https://react-todo-beta-three.vercel.app/",
-    techStack: [
-      { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
-      { name: "React", icon: FaReact, color: ICON_COLORS.React },
-      {
-        name: "Tailwind",
-        icon: RiTailwindCssFill,
-        color: ICON_COLORS.Tailwind,
-      },
-      {
-        name: "Framer Motion",
-        icon: SiFramer,
-        color: ICON_COLORS.FramerMotion,
-      },
-      { name: "Firebase", icon: SiFirebase, color: ICON_COLORS.Firebase },
-    ],
-  },
-
-  {
-    id: 6,
     title: "iPhone 15 Clone",
     description:
       "A visually stunning clone of the iPhone 15 website using GSAP and Three.js for interactive 3D animations and graphics, delivering a sleek and immersive user experience.",
     image: "/assets/iphone15.png",
     link: "https://iphone-website-pi.vercel.app/",
+    code: "https://github.com/Lokie-ree/iphone-website",
     techStack: [
       { name: "Vite", icon: SiVite, color: ICON_COLORS.Vite },
       { name: "React", icon: FaReact, color: ICON_COLORS.React },
