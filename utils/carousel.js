@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { useSwipeable } from "react-swipeable";
-
 /**
  * Hook to manage carousel autoplay
  * @param {number} totalItems
@@ -34,19 +32,4 @@ export const useCarouselAutoplay = (totalItems, intervalDuration = 5000) => {
   };
 
   return [currentIndex, setCurrentIndex, hoverHandlers];
-};
-
-/**
- * Hook to enable swiping functionality for carousel
- * @param {Function} prevSlide
- * @param {Function} nextSlide
- * @returns {Object} handlers
- */
-
-export const useCarouselSwiping = (prevSlide, nextSlide) => {
-  return useSwipeable({
-    onSwipedLeft: nextSlide,
-    onSwipedRight: prevSlide,
-    preventDefaultTouchmoveEvent: true,
-  });
 };

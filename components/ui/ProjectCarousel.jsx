@@ -5,7 +5,7 @@ import { projects } from "@/utils/constants";
 import { IoChevronBackCircle, IoChevronForwardCircle } from "react-icons/io5";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
-import { useCarouselAutoplay, useCarouselSwiping } from "@/utils/carousel";
+import { useCarouselAutoplay } from "@/utils/carousel";
 
 const ProjectCarousel = () => {
   const totalProjects = projects.length;
@@ -26,11 +26,8 @@ const ProjectCarousel = () => {
     setSelectedProject(project);
   };
 
-  const handlers = useCarouselSwiping(prevSlide, nextSlide);
-
   return (
     <div
-      {...handlers}
       {...hoverHandlers}
       className="flex items-center justify-center px-4 sm:px-12"
     >
