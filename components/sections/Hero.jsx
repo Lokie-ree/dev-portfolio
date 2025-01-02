@@ -32,21 +32,19 @@ const Hero = () => {
         </p>
 
         <div className="flex justify-center items-center gap-6">
-          <Link href="#projects" passHref>
-            <button
-              className="cta-btn"
-              aria-label="Navigate to Projects section"
-            >
-              Projects
-            </button>
+          <Link
+            href="#projects"
+            className="cta-btn"
+            aria-label="Navigate to Project section"
+          >
+            Projects
           </Link>
-          <Link href="#contact" passHref>
-            <button
-              className="cta-btn"
-              aria-label="Navigate to Contact section"
-            >
-              Contact
-            </button>
+          <Link
+            href="#contact"
+            className="cta-btn"
+            aria-label="Navigate to Contact section"
+          >
+            Contact
           </Link>
         </div>
       </div>
