@@ -33,14 +33,14 @@ const Hero = () => {
 
         <div className="flex justify-center items-center gap-6">
           <Link
-            href="#projects"
+            href="/#projects"
             className="cta-btn"
             aria-label="Navigate to Project section"
           >
             Projects
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="cta-btn"
             aria-label="Navigate to Contact section"
           >
