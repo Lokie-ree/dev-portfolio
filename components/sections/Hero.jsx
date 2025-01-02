@@ -23,7 +23,7 @@ const Hero = () => {
             width={250}
             height={250}
             priority
-            className="rounded-full mt-2 mb-2 md:mb-8"
+            className="rounded-full mt-2 mb-2 md:mb-8 border-2 border-secondary"
           />
         </div>
 
