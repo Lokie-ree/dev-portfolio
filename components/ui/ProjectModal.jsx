@@ -19,10 +19,29 @@ const ProjectModal = ({ project, onClose }) => {
         >
           <MdClose />
         </button>
-        <h3 className="font-bold text-lg text-primary">{project.title}</h3>
+        <h3 className="font-bold text-lg text-primary text-center">{project.title}</h3>
         <p className="py-4 font-light">{project.description}</p>
 
-        <div className="flex gap-4 mt-2">
+        
+        <div className="flex flex-row justify-center items-center gap-2 w-full">
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-sm sm:btn-md"
+          >
+            <FaLaptopCode size={12} />Live Project 
+          </Link>
+          <Link
+            href={project.code}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-sm sm:btn-md"
+          >
+            <FaCode size={12} />Source Code
+          </Link>
+        </div>
+        <div className="flex items-center justify-center gap-4 mt-4">
           {project.techStack.map((tech, index) => (
             <tech.icon
               key={index}
@@ -30,24 +49,6 @@ const ProjectModal = ({ project, onClose }) => {
               style={{ color: tech.color }}
             />
           ))}
-        </div>
-        <div className="flex flex-row justify-center items-center gap-4">
-          <Link
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary mt-6"
-          >
-            Live Project <FaLaptopCode className="ml-2 size-5" />
-          </Link>
-          <Link
-            href={project.code}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary mt-6"
-          >
-            Source Code <FaCode className="ml-2 size-5" />
-          </Link>
         </div>
       </div>
     </div>

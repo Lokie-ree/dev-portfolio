@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { playfairDisplay, inter } from "@/utils/fonts";
 import { themes } from "@/utils/constants";
 
-const websiteURL = "https://dev-portfolio-one-swart.vercel.app/";
+const websiteURL = "https://randalllapointjr.com";
 
 export const metadata = {
   metadataBase: new URL(websiteURL),
@@ -70,7 +70,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme={themes.dark}>
+    <html lang="en">
       <body
         className={`${playfairDisplay.className} ${inter.className} antialiased`}
       >

@@ -9,13 +9,15 @@ const ProjectCard = ({ project, onViewDetails }) => {
           <Image
             src={project.image}
             alt={project.title}
-            layout="fill"
+        
             objectFit="cover"
             className="rounded-xl"
+            width={500}
+            height={500}
           />
         </figure>
 
-        <div className="card-body flex flex-col items-center text-center p-4">
+        <div className="card-body flex flex-col items-center text-center">
           <h2 className="card-title text-primary text-xl sm:text-2xl">
             {project.title}
           </h2>
@@ -28,8 +30,8 @@ const ProjectCard = ({ project, onViewDetails }) => {
               />
             ))}
           </div>
-          <div className="card-actions mt-auto">
-            <button className="btn btn-sm btn-primary" onClick={onViewDetails}>
+          <div className="card-actions mt-2">
+            <button className="btn btn-wide btn-primary" onClick={onViewDetails}>
               More Details
             </button>
           </div>

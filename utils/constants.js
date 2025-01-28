@@ -27,12 +27,12 @@ import {
   SiGoogleanalytics,
   SiPagespeedinsights,
 } from "react-icons/si";
-import { TbBrandThreejs } from "react-icons/tb";
+import { TbBrandThreejs, TbBrandSupabase, TbBrandVercel, TbBrandNextjs } from "react-icons/tb";
 
 import { ICON_COLORS } from "./colors";
 
 export const themes = {
-  light: "nord",
+  light: "winter",
   dark: "night",
 };
 
@@ -63,8 +63,8 @@ export const projects = [
     title: "Personal Portfolio",
     description:
       "A modern developer portfolio built with Next.js 15, React, Tailwind CSS, DaisyUI, and Framer Motion. Showcases projects and skills with sleek animations and a responsive design.",
-    image: "/assets/portfolio.png",
-    link: "https://dev-portfolio-one-swart.vercel.app/",
+    image: "/assets/portfolio-thumbnail.png",
+    link: "https://randalllapointjr.com",
     code: "https://github.com/Lokie-ree/dev-portfolio",
     techStack: [
       { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
@@ -88,7 +88,7 @@ export const projects = [
     title: "E-Commerce",
     description:
       "A feature-rich e-commerce platform with dynamic cart functionality, product listing, and detail pages powered by Sanity CMS. Integrated with Stripe for secure and seamless payment processing.",
-    image: "/assets/ecommerce.png",
+    image: "/assets/buttercream-dream-thumbnail.png",
     link: "https://buttercream-dream.vercel.app/",
     code: "https://github.com/Lokie-ree/buttercream-dream",
     techStack: [
@@ -110,7 +110,7 @@ export const projects = [
     title: "Kittenz",
     description:
       "A fun and interactive web app that fetches random kitten photos from the CatAPI. Includes a dynamic matching game to test your memory and love for kittens.",
-    image: "/assets/kittenz.png",
+    image: "/assets/kittenz-thumbnail.png",
     link: "https://kittenz-theta.vercel.app/",
     code: "https://github.com/Lokie-ree/kittenz",
     techStack: [
@@ -130,7 +130,7 @@ export const projects = [
     title: "YC Directory",
     description:
       "A robust directory app allowing entrepreneurs to search for and explore popular startups. Includes features for user profile creation, startup submissions, and content management powered by Sanity CMS.",
-    image: "/assets/startups.png",
+    image: "/assets/ycdirectory-thumbnail.png",
     link: "https://yc-directory-eta-henna.vercel.app/",
     code: "https://github.com/Lokie-ree/yc-directory",
     techStack: [
@@ -177,7 +177,7 @@ export const stackItems = [
   {
     id: 1,
     name: "Next.js",
-    icon: RiNextjsLine,
+    icon: TbBrandNextjs,
     color: ICON_COLORS.Next,
   },
   {
@@ -255,8 +255,14 @@ export const stackItems = [
   {
     id: 14,
     name: "Vercel",
-    icon: SiVercel,
+    icon: TbBrandVercel,
     color: ICON_COLORS.Vercel,
+  },
+  {
+    id: 15,
+    name: "Supabase",
+    icon: TbBrandSupabase,
+    color: ICON_COLORS.Supabase,
   },
 ];
 
