@@ -1,5 +1,4 @@
 import React from "react";
-import { FaLaptopCode, FaCode } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import Link from "next/link";
 
@@ -30,7 +29,7 @@ const ProjectModal = ({ project, onClose }) => {
             rel="noopener noreferrer"
             className="btn btn-primary btn-sm sm:btn-md"
           >
-            <FaLaptopCode size={12} />Live Project 
+            Live Project 
           </Link>
           <Link
             href={project.code}
@@ -38,7 +37,7 @@ const ProjectModal = ({ project, onClose }) => {
             rel="noopener noreferrer"
             className="btn btn-primary btn-sm sm:btn-md"
           >
-            <FaCode size={12} />Source Code
+            Source Code
           </Link>
         </div>
         <div className="flex items-center justify-center gap-4 mt-4">
