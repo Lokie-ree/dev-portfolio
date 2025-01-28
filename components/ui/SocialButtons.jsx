@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const SocialButtons = ({buttons, iconClass = "w-8 h-8"}) => {
+const SocialButtons = ({buttons, iconClass = "size-8"}) => {
   return (
     <div className="flex flex-wrap gap-2">
         {buttons.map((button) => (

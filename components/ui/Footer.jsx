@@ -24,12 +24,12 @@ const Footer = () => {
               </Link>
             ))}
           </div>
-
+    
           {/* Logo and Copyright */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
             <Logo />
             <p className="text-xs font-light">
-              &copy; {year} Randall LaPoint, Jr. - All rights reserved.
+               Randall LaPoint, Jr. &copy; {year} - All rights reserved.
             </p>
           </div>
         </div>

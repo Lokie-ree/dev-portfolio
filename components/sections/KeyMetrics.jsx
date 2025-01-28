@@ -5,7 +5,7 @@ const KeyMetrics = () => {
   return (
     <section
       id="key-metrics"
-      className="py-20 lg:py-24 border-t border-t-primary metrics-bg relative overflow-hidden text-base-content"
+      className="py-12 lg:py-16 border-t border-t-primary metrics-bg relative overflow-hidden text-base-content"
     >
       <div className="container max-w-4xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
