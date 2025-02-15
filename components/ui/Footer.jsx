@@ -18,7 +18,7 @@ const Footer = () => {
                 key={link.title}
                 href={link.path}
                 aria-label={link.title}
-                className="link link-secondary text-sm mb-4"
+                className="link link-secondary no-underline text-sm mb-4"
               >
                 {link.title}
               </Link>

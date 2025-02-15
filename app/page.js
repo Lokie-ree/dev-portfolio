@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import {
   ContactSection,
   Hero,
@@ -9,16 +10,23 @@ import {
   TechStack,
 } from "@/components/sections";
 
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center min-h-screen">
+    <div className="loading loading-spinner loading-lg text-primary"></div>
+  </div>
+);
+
 export default function Home() {
   return (
-    <main>
-      {" "}
-      <Hero />
-      <Services />
-      <Projects />
-      <TechStack />
-      <KeyMetrics />
-      <ContactSection />
+    <main className="bg-base-100">
+      <Suspense fallback={<LoadingSpinner />}>
+        <Hero />
+        <Services />
+        <Projects />
+        <TechStack />
+        <KeyMetrics />
+        <ContactSection />
+      </Suspense>
     </main>
   );
 }

@@ -2,53 +2,74 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { Screen } from "@/components/layout";
+import { FadeIn } from "@/components/animations/MotionWrapper";
+import { FaArrowRight } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative hero-bg grid min-h-screen py-20 lg:py-24 text-base-content bg-base-100 place-content-center overflow-hidden"
-    >
-      <div className="z-10 flex flex-col items-center mt-4 md:mt-12">
-        <h1 className="text-primary text-4xl md:text-6xl font-extrabold">
-          Hello, I am
-        </h1>
-        <h2 className="max-w-3xl font-semibold leading-tight text-3xl md:text-6xl mt-2 md:mt-6 mb-2 md:mb-6">
-          Randall LaPoint, Jr.
-        </h2>
-        <div>
-          <Image
-            src="/assets/coding-avatar.jpg"
-            alt="Profile picture of avatar typing on a laptop"
-            width={250}
-            height={250}
-            priority
-            className="rounded-full mt-2 mb-2 md:mb-8 border-2 border-secondary"
-          />
-        </div>
+    <Screen className="hero-bg overflow-hidden">
+      <div className="container-width">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <FadeIn>
+              <h1 className="text-primary text-3xl md:text-5xl font-bold mb-6">
+                Building Modern <br />
+                Scalable Solutions
+              </h1>
+            </FadeIn>
 
-        <p className="max-w-xl text-2xl md:text-4xl text-center font-normal mb-6 mt-3">
-          Full-Stack Developer
-        </p>
+            <FadeIn delay={0.2}>
+              <p className="text-2xl md:text-3xl font-medium mb-2 text-base-content/90">
+                Randall LaPoint, Jr.
+              </p>
+              <p className="text-xl md:text-2xl mb-8 text-secondary/90">
+                Full-Stack Developer
+              </p>
+            </FadeIn>
 
-        <div className="flex justify-center items-center gap-6">
-          <Link
-            href="/#projects"
-            className="cta-btn"
-            aria-label="Navigate to Project section"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/#contact"
-            className="cta-btn"
-            aria-label="Navigate to Contact section"
-          >
-            Contact
-          </Link>
+            <FadeIn delay={0.3}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link
+                  href="/#projects"
+                  className="btn btn-accent btn-md sm:btn-lg group"
+                >
+                  See My Work
+                  <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/#contact"
+                  className="btn btn-ghost btn-md sm:btn-lg hover:btn-accent"
+                >
+                  Let's Connect
+                </Link>
+              </div>
+            </FadeIn>
+          </div>
+
+          {/* Right Content - Avatar */}
+          <FadeIn className="order-1 lg:order-2">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="flex justify-center"
+            >
+              <div className="relative w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96">
+                <Image
+                  src="/assets/coding-avatar.jpg"
+                  alt="Profile picture of Randall LaPoint Jr."
+                  fill
+                  priority
+                  className="rounded-2xl object-cover shadow-2xl"
+                />
+              </div>
+            </motion.div>
+          </FadeIn>
         </div>
       </div>
-    </section>
+    </Screen>
   );
 };
 

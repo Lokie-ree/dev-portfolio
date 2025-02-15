@@ -35,55 +35,50 @@ const ContactForm = () => {
   return (
     <div className="card p-6 rounded-xl shadow-md bg-gradient-to-br from-white/10 to-transparent">
       <Toaster />
-        <h3 className="text-3xl md:text-4xl font-bold text-center mb-6">
-          Contact Me
-        </h3>
-        <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-          <label
-            htmlFor="name"
-            className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
-          >
-            <MdOutlinePerson />
-            <input
-              type="text"
-              name="user_name"
-              placeholder="Name"
-              aria-label="Name"
-              className="grow outline-none"
-              required
-            />
-          </label>
-
-          <label
-            htmlFor="email"
-            className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
-          >
-            <MdOutlineEmail />
-            <input
-              type="email"
-              name="user_email"
-              placeholder="Email"
-              aria-label="Email"
-              className="grow outline-none"
-              required
-            />
-          </label>
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="Message"
-            aria-label="Message"
-            className="textarea textarea-bordered w-full rounded-xl placeholder:text-gray-400 text-sm leading-relaxed input-hover outline-none"
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+        <label
+          htmlFor="name"
+          className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
+        >
+          <MdOutlinePerson />
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Name"
+            aria-label="Name"
+            className="grow outline-none"
             required
-          ></textarea>
-          <button type="submit" className="cta-btn w-full">
-            Send Message
-          </button>
-        </form>
-     
+          />
+        </label>
+
+        <label
+          htmlFor="email"
+          className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
+        >
+          <MdOutlineEmail />
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Email"
+            aria-label="Email"
+            className="grow outline-none"
+            required
+          />
+        </label>
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Message"
+          aria-label="Message"
+          className="textarea textarea-bordered w-full rounded-xl placeholder:text-gray-400 text-sm leading-relaxed input-hover outline-none"
+          required
+        ></textarea>
+        <button type="submit" className="cta-btn w-full">
+          Send Message
+        </button>
+      </form>
 
       {/* Right Side: Additional Info */}
-      
     </div>
   );
 };

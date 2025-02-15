@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base Styles */
 html,
 body {
   margin: 0;
@@ -10,6 +11,17 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes fadeIn {
@@ -23,116 +35,124 @@ body {
   }
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
 .fade-in {
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Perspective for 3D Effect */
-.perspective {
-  perspective: 1000px;
+.slide-in {
+  animation: slideIn 0.6s ease-out forwards;
 }
 
-/* Transform style for 3D */
-.transform-style-3d {
-  transform-style: preserve-3d;
-}
-
-/* Hides the back face */
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-/* Rotate for the back face */
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-/* Group Hover Flip Trigger */
-.group:hover .relative {
-  transform: rotateY(180deg);
-}
-
+/* Custom Utility Classes */
 @layer utilities {
-  .nav-link {
-    @apply font-medium text-base-content hover:text-primary transition-colors duration-300;
+  /* Layout Utilities */
+  .section-padding {
+    @apply py-16 lg:py-24;
   }
 
-  .fixed-menu {
-    @apply fixed inset-0 h-full w-full bg-red-500;
+  .container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .nav-bg {
-    @apply bg-base-300 shadow-md;
-  }
-
-  .mobile-menu-bg {
-    @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/15;
-  }
-
+  /* Background Gradients */
   .hero-bg {
-    @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20;
+    @apply bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 backdrop-blur-sm;
   }
 
-  .services-bg {
-    @apply bg-gradient-to-tr from-secondary/10 via-primary/10 to-accent/5;
+  .section-bg {
+    @apply bg-gradient-to-tr from-base-200/50 via-base-100 to-base-200/50;
   }
 
-  .metrics-bg {
-    @apply bg-gradient-to-bl from-primary/10 via-secondary/20 to-neutral/10;
-  }
-
-  .project-bg {
-    @apply bg-gradient-to-r from-accent/10 via-secondary/10 to-primary/5;
-  }
-
-  .stack-bg {
-    @apply bg-gradient-to-t from-secondary/20 via-accent/10 to-primary/5;
-  }
-
-  .contact-bg {
-    @apply bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/5;
-  }
+  /* Component Styles */
   .cta-btn {
-    @apply btn btn-primary rounded-xl hover:scale-105 hover:bg-secondary hover:border hover:border-accent transition-all duration-300;
-  }
-
-  .project-card {
-    @apply bg-base-100 bg-gradient-to-br from-white/10 to-transparent rounded-xl shadow-lg transition-transform duration-300;
-  }
-
-  .project-card-hover {
-    @apply hover:shadow-2xl hover:scale-105 hover:border hover:border-accent;
-  }
-
-  .card-hover {
-    @apply hover:shadow-2xl hover:scale-105 hover:border hover:border-accent transition-transform duration-300;
+    @apply btn btn-primary px-6 py-2 rounded-xl 
+           font-semibold tracking-wide
+           transform transition-all duration-300
+           hover:scale-105 hover:shadow-lg
+           hover:bg-primary/90 hover:border-accent/50
+           active:scale-95;
   }
 
   .card-style {
-    @apply bg-base-100 bg-gradient-to-br from-white/10 to-transparent shadow-xl rounded-xl;
+    @apply bg-base-100 rounded-xl shadow-md
+           border border-base-300
+           backdrop-blur-sm
+           bg-gradient-to-br from-white/10 to-transparent
+           transition-all duration-300;
   }
 
-  .glass {
-    @apply bg-gradient-to-br from-white/10 to-transparent backdrop-blur-lg border border-white/20 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.37)];
+  .card-hover {
+    @apply hover:shadow-xl
+           hover:scale-105
+           hover:border-accent/50
+           transform transition-all duration-300;
   }
 
-  .text-hover {
-    @apply transition-transform duration-300 hover:scale-125;
+  /* Input Styles */
+  .input-style {
+    @apply input input-bordered w-full
+           bg-base-200/50 backdrop-blur-sm
+           border-base-300
+           focus:border-primary focus:ring-2 focus:ring-primary/50
+           transition-all duration-300;
   }
 
-  .input-hover {
-    @apply hover:ring-2 hover:ring-accent hover:shadow-md transition-all duration-300;
+  /* Text Styles */
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
   }
 
-  .btn-hover {
-    @apply hover:scale-105 transition-transform duration-300;
+  .heading-2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold;
   }
 
+  .heading-3 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-medium;
+  }
+
+  /* Glass Effect */
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md
+           border border-white/20
+           shadow-[0_8px_32px_0_rgba(31,38,135,0.37)];
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply font-medium text-base-content/80
+           hover:text-primary transition-colors duration-300;
+  }
+
+  .mobile-menu {
+    @apply fixed inset-0 z-50
+           bg-base-100/95 backdrop-blur-md
+           transform transition-transform duration-300;
+  }
+
+  /* Toast Notifications */
   .toast-success {
-    @apply bg-success text-success-content;
+    @apply bg-success/90 text-success-content
+           backdrop-blur-sm shadow-lg;
   }
 
   .toast-error {
-    @apply bg-error text-error-content;
+    @apply bg-error/90 text-error-content
+           backdrop-blur-sm shadow-lg;
   }
 }

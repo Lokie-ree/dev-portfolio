@@ -18,14 +18,13 @@ export const metadata = {
   },
 
   openGraph: {
-    title:
-      "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
+    title: "Randall LaPoint Jr | Full-Stack Developer",
     description:
-      "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
+      "Professional portfolio showcasing full-stack development projects and services",
     url: websiteURL,
     siteName:
       "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
-    images: "./opengraph-image.png",
+    images: ["/assets/og-image.jpg"],
   },
 
   twitter: {
@@ -38,34 +37,11 @@ export const metadata = {
     images: ["./twitter-image.png"],
   },
 
-  title:
-    "Randall LaPoint, Jr. - Fullstack Developer & Educator | Building Ideas into Reality",
+  title: "Randall LaPoint Jr | Full-Stack Developer",
   description:
-    "Showcasing Randall's journey as a developer and educator through impactful projects and modern web solutions. Explor sleek designs and robust applications that reflect the future of web development.",
+    "Professional portfolio showcasing full-stack development projects",
   author: "Randall LaPoint, Jr.",
-  keywords: [
-    "Randall LaPoint",
-    "Fullstack Developer",
-    "Web Developer Portfolio",
-    "Modern Web Solutions",
-    "Innovative Web Development",
-    "Sleek Designs",
-    "Robust Applications",
-    "Educator",
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Web Design",
-    "Digital Solutions",
-    "UI/UX",
-    "Frontend Development",
-    "Backend Development",
-    "Portfolio Projects",
-    "Tech Stack",
-    "Responsive Design",
-    "SEO Optimization",
-  ],
+  keywords: ["Full-Stack Developer", "Web Development", "React", "Next.js"],
 };
 
 export default function RootLayout({ children }) {

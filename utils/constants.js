@@ -332,11 +332,11 @@ export const services = [
     title: "E-Commerce Solutions",
     image: "/assets/ecommerce_solutions.png",
     description:
-      "From intuitive storefronts to secure payment integration, I create e-commerce platforms that drive sales and deliver seamless user experiences.",
+      "I create e-commerce platforms that drive sales and deliver seamless user experiences.",
   },
   {
     id: 3,
-    title: "Website Optimization & Maintenance",
+    title: "Website Optimization",
     image: "/assets/website_optimization_maintenance.png",
     description:
       "I enhance website speed, performance, and reliability while providing ongoing updates to keep your site running smoothly.",
@@ -359,7 +359,7 @@ export const services = [
 
   {
     id: 6,
-    title: "API & Third-Party Integrations",
+    title: "API Integrations",
     image: "/assets/api_third_party_integration.png",
     description:
       "I connect your systems with custom APIs and third-party tools, ensuring seamless functionality and enhanced efficiency.",
@@ -379,3 +379,19 @@ export const socialButtons = [
     href: "https://www.linkedin.com/in/randall-lapoint-a8a72b289/",
   },
 ];
+
+export const CONTACT_FORM_INITIAL_VALUES = {
+  user_name: "",
+  user_email: "",
+  message: "",
+};
+
+export const ANIMATION_VARIANTS = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+export const TRANSITION_PROPS = {
+  duration: 0.5,
+  ease: "easeOut",
+};

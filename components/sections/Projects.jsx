@@ -1,20 +1,20 @@
 "use client";
 
-import ProjectCarousel from "../ui/ProjectCarousel";
+import { Section } from "@/components/layout";
+import dynamic from "next/dynamic";
+import LoadingSpinner from "../ui/LoadingSpinner";
+
+const ProjectCarousel = dynamic(() => import("../ui/ProjectCarousel"), {
+  loading: () => <LoadingSpinner />,
+  ssr: false,
+});
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="py-20 lg:py-24 border-t border-t-primary project-bg text-base-content"
-    >
-      <div>
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-12">
-          Projects
-        </h2>
-        <ProjectCarousel />
-      </div>
-    </section>
+    <Section id="projects" className="section-bg">
+      <h2 className="heading-2 text-center mb-12">Projects</h2>
+      <ProjectCarousel />
+    </Section>
   );
 };
 
