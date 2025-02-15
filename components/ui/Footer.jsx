@@ -18,18 +18,18 @@ const Footer = () => {
                 key={link.title}
                 href={link.path}
                 aria-label={link.title}
-                className="link link-secondary no-underline text-sm mb-4"
+                className="link no-underline hover:text-primary text-sm mb-4"
               >
                 {link.title}
               </Link>
             ))}
           </div>
-    
+
           {/* Logo and Copyright */}
           <div className="flex items-center gap-2">
             <Logo />
-            <p className="text-xs font-light">
-               Randall LaPoint, Jr. &copy; {year} - All rights reserved.
+            <p className="text-xs font-medium">
+              Randall LaPoint, Jr. &copy; {year} - All rights reserved.
             </p>
           </div>
         </div>

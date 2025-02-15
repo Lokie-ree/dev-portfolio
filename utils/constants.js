@@ -27,7 +27,12 @@ import {
   SiGoogleanalytics,
   SiPagespeedinsights,
 } from "react-icons/si";
-import { TbBrandThreejs, TbBrandSupabase, TbBrandVercel, TbBrandNextjs } from "react-icons/tb";
+import {
+  TbBrandThreejs,
+  TbBrandSupabase,
+  TbBrandVercel,
+  TbBrandNextjs,
+} from "react-icons/tb";
 
 import { ICON_COLORS } from "./colors";
 
@@ -331,7 +336,7 @@ export const services = [
     title: "Custom Web Apps",
     image: "/assets/custom_web_development.png",
     description:
-      "I build tailored websites and web applications, including scalable CMS and Progressive Web Apps, designed to meet your unique needs.",
+      "I build custom websites and web apps designed to meet your unique needs.",
   },
   {
     id: 2,

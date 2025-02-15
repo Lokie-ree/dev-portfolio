@@ -15,19 +15,19 @@ const KeyMetrics = () => {
             {metrics.map((metric, index) => (
               <FadeIn key={metric.id} direction="up" delay={index * 0.1}>
                 <div className="stat card-style card-hover w-full">
-                  <div className="stat-value text-lg sm:text-xl md:text-2xl flex items-center justify-between text-primary font-bold">
+                  <div className="stat-value text-lg sm:text-xl md:text-2xl flex items-center justify-between text-accent font-bold">
                     {metric.value}
                     <div className="stat-figure text-primary">
                       <metric.icon
-                        className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+                        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
                         aria-hidden="true"
                       />
                     </div>
                   </div>
-                  <div className="stat-title text-base md:text-lg text-secondary font-semibold mt-2 mb-1">
+                  <div className=" md:text-lg font-bold mt-2 mb-1">
                     {metric.title}
                   </div>
-                  <div className="stat-desc text-sm md:text-base text-base-content/80 truncate">
+                  <div className="stat-desc text-sm md:text-base font-medium truncate">
                     {metric.description}
                   </div>
                 </div>

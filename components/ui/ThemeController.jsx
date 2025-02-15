@@ -29,11 +29,10 @@ const ThemeController = () => {
         checked={theme === themes.light}
       />
       <span className="swap-off">
-      <BiSun className="h-8 w-8 text-yellow-500 transition-transform duration-200 hover:scale-125 hover:rotate-12" />
+        <BiSun className="h-8 w-8 text-yellow-500 transition-transform duration-200 hover:scale-125 hover:rotate-12" />
       </span>
       <span className="swap-on">
-      <BiMoon className="h-8 w-8 text-purple-500 transition-transform duration-200 hover:scale-125 hover:-rotate-12" />
-
+        <BiMoon className="h-8 w-8 text-purple-500 transition-transform duration-200 hover:scale-125 hover:-rotate-12" />
       </span>
     </label>
   );

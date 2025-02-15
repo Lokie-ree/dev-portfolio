@@ -25,7 +25,7 @@ const Hero = () => {
               <p className="text-2xl md:text-3xl font-medium mb-2 text-base-content/90">
                 Randall LaPoint, Jr.
               </p>
-              <p className="text-xl md:text-2xl mb-8 text-secondary/90">
+              <p className="text-xl md:text-2xl mb-8 font-medium">
                 Full-Stack Developer
               </p>
             </FadeIn>
@@ -34,14 +34,14 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
                   href="/#projects"
-                  className="btn btn-accent btn-md sm:btn-lg group"
+                  className="btn btn-secondary btn-md sm:btn-lg group"
                 >
                   See My Work
                   <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/#contact"
-                  className="btn btn-ghost btn-md sm:btn-lg hover:btn-accent"
+                  className="btn btn-ghost btn-md sm:btn-lg"
                 >
                   Let's Connect
                 </Link>

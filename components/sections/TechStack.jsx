@@ -6,7 +6,7 @@ import { FadeIn, StaggerChildren } from "@/components/animations/MotionWrapper";
 
 const TechStack = () => {
   return (
-    <Section id="tech-stack" className="section-bg relative overflow-hidden">
+    <Section id="tech-stack" className="tech-bg relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <FadeIn>
           <h2 className="heading-2 text-center mb-12">Tech Stack</h2>
@@ -16,7 +16,7 @@ const TechStack = () => {
             {stackItems.map((item, index) => (
               <FadeIn key={index} direction="up" delay={index * 0.1}>
                 <div
-                  className="tooltip tooltip-bottom card-hover tooltip-accent relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl"
+                  className="tooltip tooltip-bottom text-sm font-light card-hover relative flex flex-col bg-base-100 group mx-auto items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-white/10 to-transparent rounded-full shadow-xl"
                   data-tip={item.name}
                 >
                   <div

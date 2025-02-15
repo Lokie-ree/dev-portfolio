@@ -17,8 +17,8 @@ const ProjectModal = ({ project, onClose }) => {
           >
             <MdClose />
           </button>
-          <h3 className="heading-3 text-primary">{project.title}</h3>
-          <p className="py-4 font-light">{project.description}</p>
+          <h3 className="heading-3 font-bold">{project.title}</h3>
+          <p className="py-4 font-thin">{project.description}</p>
 
           <div className="flex gap-4 mt-2">
             {project.techStack.map((tech, index) => (

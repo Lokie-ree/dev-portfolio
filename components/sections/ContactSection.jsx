@@ -10,7 +10,7 @@ import { FaCode } from "react-icons/fa6";
 
 const ContactSection = () => {
   return (
-    <Section id="contact" className="section-bg">
+    <Section id="contact" className="contact-bg">
       <div className="max-w-5xl mx-auto">
         <FadeIn>
           <h2 className="heading-2 text-center mb-12">Get in Touch</h2>
@@ -26,19 +26,19 @@ const ContactSection = () => {
           <FadeIn delay={0.2}>
             <div className="card card-style h-full">
               <div className="card-body">
-                <h3 className="text-2xl font-bold text-center text-primary mb-4">
+                <h3 className="text-2xl font-bold text-center mb-4">
                   Let's Build Together
                 </h3>
 
                 {/* Contact Details */}
                 <div className="space-y-6 mb-6">
                   <div className="flex items-center gap-3">
-                    <MdEmail className="text-accent text-xl" />
+                    <MdEmail className="text-secondary text-xl" />
                     <div>
                       <p className="font-medium">Email</p>
                       <a
                         href="mailto:randall.lapoint.jr@gmail.com"
-                        className="text-secondary hover:text-accent transition-colors"
+                        className="font-light hover:text-primary transition-colors"
                       >
                         rlapointjr@gmail.com
                       </a>
@@ -46,18 +46,18 @@ const ContactSection = () => {
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <MdLocationOn className="text-accent text-xl" />
+                    <MdLocationOn className="text-secondary text-xl" />
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-secondary">Baton Rouge, LA</p>
+                      <p className="font-light">Baton Rouge, LA</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <FaCode className="text-accent text-xl" />
+                    <FaCode className="text-secondary text-xl" />
                     <div>
                       <p className="font-medium">Availability</p>
-                      <p className="text-secondary">Open to Opportunities</p>
+                      <p className="font-light">Open to Opportunities</p>
                     </div>
                   </div>
                 </div>
@@ -66,7 +66,7 @@ const ContactSection = () => {
                 <div className="flex flex-col items-center">
                   <SocialButtons
                     buttons={socialButtons}
-                    iconClass="w-8 h-8 hover:text-accent transition-colors"
+                    iconClass="w-8 h-8 transition-colors"
                   />
                 </div>
               </div>

@@ -8,7 +8,7 @@ const Logo = () => {
       <img
         src="/assets/logo.png"
         alt="Site Logo"
-        className="size-8 sm:size-9 object-contain hover:scale-105 transition-transform"
+        className="w-8 h-8 object-contain hover:scale-105 transition-transform"
       />
     </Link>
   );

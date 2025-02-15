@@ -33,7 +33,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
             className="card-body flex flex-col items-center justify-center text-center p-4 bg-base-100/80 backdrop-blur-sm absolute inset-0 rounded-xl"
           >
             <div className="flex flex-col items-center gap-4">
-              <h2 className="card-title text-primary text-xl sm:text-2xl">
+              <h2 className="card-title font-bold text-xl sm:text-2xl">
                 {project.title}
               </h2>
               <div className="flex justify-center gap-4">

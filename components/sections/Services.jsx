@@ -25,10 +25,12 @@ const Services = () => {
                     />
                   </figure>
                   <div className="card-body p-6">
-                    <h2 className="card-title text-xl sm:text-2xl font-bold text-primary mb-2">
+                    <h2 className="card-title text-xl sm:text-2xl font-bold mb-2">
                       {service.title}
                     </h2>
-                    <p className="text-sm sm:text-md">{service.description}</p>
+                    <p className="text-sm sm:text-md font-light">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </FadeIn>
