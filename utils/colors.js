@@ -13,4 +13,5 @@ export const ICON_COLORS = {
   Firebase: "#FFCA28",
   Vercel: "#000000",
   FramerMotion: "#0055FF",
+  Supabase: "#3ECF8E",
 };

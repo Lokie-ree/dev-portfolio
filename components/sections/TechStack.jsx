@@ -12,7 +12,7 @@ const TechStack = () => {
           <h2 className="heading-2 text-center mb-12">Tech Stack</h2>
         </FadeIn>
         <StaggerChildren>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 md:gap-8 lg:gap-12">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12 md:gap-14">
             {stackItems.map((item, index) => (
               <FadeIn key={index} direction="up" delay={index * 0.1}>
                 <div

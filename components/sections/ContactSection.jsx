@@ -16,7 +16,7 @@ const ContactSection = () => {
           <h2 className="heading-2 text-center mb-12">Get in Touch</h2>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid sm:grid-cols-2 gap-8 items-start">
           {/* Contact Form */}
           <SlideIn direction="up">
             <ContactForm />
