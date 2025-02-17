@@ -13,7 +13,7 @@
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "framer-motion": "^11.11.17",
-    "next": "15.0.3",
+    "next": "^15.1.7",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "react-hot-toast": "^2.4.1",
