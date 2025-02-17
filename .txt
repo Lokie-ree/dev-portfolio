@@ -1,0 +1,26 @@
+<div>
+
+{metrics.map((metric, index) => (
+  <FadeIn key={metric.id} direction="up" delay={index * 0.1}>
+    <div
+      key={index}
+      tabIndex={0}
+      className="collapse bg-base-100 border border-base-300"
+    >
+      <div className="collapse-title font-semibold flex items-center justify-between">
+        {metric.title}
+        <div className="text-primary">
+          <metric.icon
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+      <div className="collapse-content text-sm">
+        <p className="text-lg font-bold text-accent">{metric.value}</p>
+        <p className="text-sm md:text-base font-medium">{metric.description}</p>
+      </div>
+    </div>
+  <FadeIn />
+))}
+</div>

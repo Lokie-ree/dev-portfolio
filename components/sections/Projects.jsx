@@ -11,7 +11,7 @@ const ProjectCarousel = dynamic(() => import("../ui/ProjectCarousel"), {
 
 const Projects = () => {
   return (
-    <Section id="projects" className="section-bg">
+    <Section id="projects" className="section-bg px-2">
       <h2 className="heading-2 text-center mb-12">Projects</h2>
       <ProjectCarousel />
     </Section>

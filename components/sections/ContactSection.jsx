@@ -10,7 +10,7 @@ import { FaCode } from "react-icons/fa6";
 
 const ContactSection = () => {
   return (
-    <Section id="contact" className="contact-bg p-4">
+    <Section id="contact" className="contact-bg px-2">
       <div className="max-w-3xl mx-auto">
         <div className="grid sm:grid-cols-2 gap-8 items-start">
           {/* Contact Form */}
@@ -62,7 +62,7 @@ const ContactSection = () => {
                 <div className="flex flex-col items-center mt-2">
                   <SocialButtons
                     buttons={socialButtons}
-                    iconClass="w-12 h-12 transition-colors"
+                    iconClass="w-8 h-8 transition-colors"
                   />
                 </div>
               </div>

@@ -6,7 +6,7 @@ import { FadeIn, StaggerChildren } from "@/components/animations/MotionWrapper";
 
 const TechStack = () => {
   return (
-    <Section id="tech-stack" className="tech-bg relative overflow-hidden p-4">
+    <Section id="tech-stack" className="tech-bg relative overflow-hidden px-2">
       <div className="max-w-3xl mx-auto">
         <FadeIn>
           <h2 className="heading-2 text-center mb-12">Tech Stack</h2>

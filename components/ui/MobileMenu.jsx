@@ -16,7 +16,7 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
       className="fixed inset-0 mobile-menu-bg bg-base-100 backdrop-blur-lg z-50 flex flex-col justify-center items-center"
     >
       {/* Navigation Links */}
-      <ul className="space-y-6 text-center text-xl">
+      <ul className="space-y-4 text-center text-xl">
         {mobileLinks.map(({ path, title }, index) => (
           <li key={index}>
             <Link

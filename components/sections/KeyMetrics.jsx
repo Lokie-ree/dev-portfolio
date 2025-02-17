@@ -5,30 +5,30 @@ import { FadeIn, StaggerChildren } from "@/components/animations/MotionWrapper";
 
 const KeyMetrics = () => {
   return (
-    <Section id="key-metrics" className="section-bg p-4">
-      <div className="max-w-3xl mx-auto">
+    <Section id="key-metrics" className="section-bg px-2">
+      <div className="max-w-2xl mx-auto">
         <FadeIn>
           <h2 className="heading-2 text-center mb-12">Key Metrics</h2>
         </FadeIn>
         <StaggerChildren>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
+          <div className="flex flex-col gap-6">
             {metrics.map((metric, index) => (
               <FadeIn key={metric.id} direction="up" delay={index * 0.1}>
-                <div className="stat card-style card-hover w-full">
-                  <div className="stat-value text-lg sm:text-xl md:text-2xl flex items-center justify-between text-accent font-bold">
-                    {metric.value}
-                    <div className="stat-figure text-primary">
-                      <metric.icon
-                        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
-                        aria-hidden="true"
-                      />
+                <div
+                  tabIndex={0}
+                  className="collapse collapse-arrow bg-base-200 border border-base-300"
+                >
+                  <div className="collapse-title flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <span className="text-primary">
+                        <metric.icon className="text-lg sm:text-2xl" aria-hidden="true" />
+                      </span>
+                      <span className="text-sm sm:text-base font-medium">{metric.title}</span>
                     </div>
+                    <span className="text-base sm:text-2xl font-extrabold text-accent">{metric.value}</span>
                   </div>
-                  <div className=" md:text-lg font-bold mt-2 mb-1">
-                    {metric.title}
-                  </div>
-                  <div className="stat-desc text-sm md:text-base font-medium truncate">
-                    {metric.description}
+                  <div className="collapse-content">
+                    <p className="text-sm sm:text-base font-thin">{metric.description}</p>
                   </div>
                 </div>
               </FadeIn>
