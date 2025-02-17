@@ -1,12 +1,15 @@
 "use client";
 
 import React, { useRef } from "react";
+import { useRouter } from "next/navigation";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { MdOutlinePerson, MdOutlineEmail } from "react-icons/md";
+import { FadeIn } from "@/components/animations/MotionWrapper";
 
 const ContactForm = () => {
   const formRef = useRef();
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +28,11 @@ const ContactForm = () => {
       );
 
       toast.success("Message sent successfully!");
-      form.reset(); // Clear form
+      form.reset();
+
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
     } catch (error) {
       console.error("Error sending email: ", error);
       toast.error("Failed to send the message. Please try again.");
@@ -36,6 +43,9 @@ const ContactForm = () => {
     <div className="card p-6 rounded-xl shadow-md bg-gradient-to-br from-white/10 to-transparent">
       <Toaster />
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+        <FadeIn>
+          <h3 className="text-3xl font-bold text-center">Get in Touch</h3>
+        </FadeIn>
         <label
           htmlFor="name"
           className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
@@ -67,7 +77,7 @@ const ContactForm = () => {
         </label>
         <textarea
           name="message"
-          rows="4"
+          rows="3"
           placeholder="Message"
           aria-label="Message"
           className="textarea textarea-bordered w-full rounded-xl placeholder:text-gray-400 text-sm leading-relaxed input-hover outline-none"
@@ -77,8 +87,6 @@ const ContactForm = () => {
           Send Message
         </button>
       </form>
-
-      {/* Right Side: Additional Info */}
     </div>
   );
 };

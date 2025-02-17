@@ -10,12 +10,8 @@ import { FaCode } from "react-icons/fa6";
 
 const ContactSection = () => {
   return (
-    <Section id="contact" className="contact-bg">
-      <div className="max-w-5xl mx-auto">
-        <FadeIn>
-          <h2 className="heading-2 text-center mb-12">Get in Touch</h2>
-        </FadeIn>
-
+    <Section id="contact" className="contact-bg p-4">
+      <div className="max-w-3xl mx-auto">
         <div className="grid sm:grid-cols-2 gap-8 items-start">
           {/* Contact Form */}
           <SlideIn direction="up">
@@ -26,7 +22,7 @@ const ContactSection = () => {
           <FadeIn delay={0.2}>
             <div className="card card-style h-full">
               <div className="card-body">
-                <h3 className="text-2xl font-bold text-center mb-4">
+                <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4">
                   Let's Build Together
                 </h3>
 
@@ -63,10 +59,10 @@ const ContactSection = () => {
                 </div>
 
                 {/* Social Links */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center mt-2">
                   <SocialButtons
                     buttons={socialButtons}
-                    iconClass="w-8 h-8 transition-colors"
+                    iconClass="w-12 h-12 transition-colors"
                   />
                 </div>
               </div>

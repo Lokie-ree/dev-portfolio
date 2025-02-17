@@ -324,7 +324,7 @@ export const metrics = [
   {
     id: 8,
     value: "5+",
-    title: "Live Deployments",
+    title: "Deployed Apps",
     description: "Web apps currently live",
     icon: RiUploadCloudFill,
   },
@@ -390,19 +390,3 @@ export const socialButtons = [
     href: "https://www.linkedin.com/in/randall-lapoint-a8a72b289/",
   },
 ];
-
-export const CONTACT_FORM_INITIAL_VALUES = {
-  user_name: "",
-  user_email: "",
-  message: "",
-};
-
-export const ANIMATION_VARIANTS = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
-export const TRANSITION_PROPS = {
-  duration: 0.5,
-  ease: "easeOut",
-};

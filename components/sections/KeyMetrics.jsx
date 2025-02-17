@@ -5,13 +5,13 @@ import { FadeIn, StaggerChildren } from "@/components/animations/MotionWrapper";
 
 const KeyMetrics = () => {
   return (
-    <Section id="key-metrics" className="section-bg">
-      <div className="max-w-5xl mx-auto">
+    <Section id="key-metrics" className="section-bg p-4">
+      <div className="max-w-3xl mx-auto">
         <FadeIn>
           <h2 className="heading-2 text-center mb-12">Key Metrics</h2>
         </FadeIn>
         <StaggerChildren>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
             {metrics.map((metric, index) => (
               <FadeIn key={metric.id} direction="up" delay={index * 0.1}>
                 <div className="stat card-style card-hover w-full">

@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const Services = () => {
   return (
-    <Section id="services" className="section-bg">
-      <div className="max-w-5xl mx-auto">
+    <Section id="services" className="section-bg p-4">
+      <div className="max-w-3xl mx-auto">
         <FadeIn>
           <h2 className="heading-2 text-center mb-12 lg:mb-16">Services</h2>
         </FadeIn>

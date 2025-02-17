@@ -15,34 +15,28 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             <FadeIn>
-              <h1 className="text-primary text-3xl md:text-5xl font-bold mb-6">
-                Building Modern <br />
-                Scalable Solutions
+              <h1 className="text-primary text-3xl sm:text-4xl font-bold mb-6">
+                Creating Innovative <br />
+                Solutions
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <p className="text-2xl md:text-3xl font-medium mb-2 text-base-content/90">
-                Randall LaPoint, Jr.
-              </p>
-              <p className="text-xl md:text-2xl mb-8 font-medium">
+              <p className="text-xl md:text-2xl font-medium mb-2">
                 Full-Stack Developer
+              </p>
+              <p className="text-xl sm:text-2xl font-thin mb-8 text-base-content/90">
+                Randall LaPoint, Jr.
               </p>
             </FadeIn>
 
             <FadeIn delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link
-                  href="/#projects"
-                  className="btn btn-secondary btn-md sm:btn-lg group"
-                >
+                <Link href="/#projects" className="btn btn-secondary group">
                   See My Work
-                  <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  <FaArrowRight className=" group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link
-                  href="/#contact"
-                  className="btn btn-ghost btn-md sm:btn-lg"
-                >
+                <Link href="/#contact" className="btn btn-outline">
                   Let's Connect
                 </Link>
               </div>
@@ -56,7 +50,7 @@ const Hero = () => {
               transition={{ duration: 0.3 }}
               className="flex justify-center"
             >
-              <div className="relative w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96">
+              <div className="relative w-44 h-44 md:w-60 md:h-60 lg:w-72 lg:h-72">
                 <Image
                   src="/assets/coding-avatar.jpg"
                   alt="Profile picture of Randall LaPoint Jr."

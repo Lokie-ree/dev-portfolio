@@ -67,7 +67,7 @@ body {
   }
 
   .container-width {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   /* Background Gradients */

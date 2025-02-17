@@ -6,13 +6,13 @@ import { FadeIn, StaggerChildren } from "@/components/animations/MotionWrapper";
 
 const TechStack = () => {
   return (
-    <Section id="tech-stack" className="tech-bg relative overflow-hidden">
-      <div className="max-w-5xl mx-auto">
+    <Section id="tech-stack" className="tech-bg relative overflow-hidden p-4">
+      <div className="max-w-3xl mx-auto">
         <FadeIn>
           <h2 className="heading-2 text-center mb-12">Tech Stack</h2>
         </FadeIn>
         <StaggerChildren>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12 md:gap-14">
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-12 md:gap-14">
             {stackItems.map((item, index) => (
               <FadeIn key={index} direction="up" delay={index * 0.1}>
                 <div

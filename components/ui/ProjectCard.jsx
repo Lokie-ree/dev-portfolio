@@ -9,7 +9,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
     <motion.div
       whileHover={{ y: -5 }}
       transition={{ duration: 0.2 }}
-      className="card card-compact shadow-md w-full max-w-2xl mx-auto aspect-[4/3]"
+      className="card card-compact shadow-md w-full max-w-xl mx-auto aspect-[4/3]"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={() => !isHovered && setIsHovered(!isHovered)}
@@ -48,7 +48,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn btn-sm btn-primary mt-4"
+                className="btn btn-wide sm:btn-wide btn-primary mt-4"
                 onClick={(e) => {
                   e.stopPropagation();
                   onViewDetails();

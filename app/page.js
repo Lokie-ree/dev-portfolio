@@ -20,7 +20,9 @@ export default function Home() {
   return (
     <main className="bg-base-100">
       <Suspense fallback={<LoadingSpinner />}>
-        <Hero />
+        <div className="mt-8 sm:mt-0">
+          <Hero />
+        </div>
         <Services />
         <Projects />
         <TechStack />

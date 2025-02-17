@@ -28,7 +28,7 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <div {...hoverHandlers} className="relative w-full max-w-4xl mx-auto px-4">
+    <div {...hoverHandlers} className="relative w-full max-w-3xl mx-auto px-4">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}

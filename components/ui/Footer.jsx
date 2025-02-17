@@ -8,7 +8,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-base-200 border-t border-t-primary text-base-content p-4">
+    <footer className="bg-base-200 text-base-content p-4">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           {/* Secondary Links */}
