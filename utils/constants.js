@@ -282,14 +282,14 @@ export const metrics = [
   {
     id: 2,
     value: "10+",
-    title: "AI-Powered & Custom Solutions",
+    title: "AI Custom Solutions",
     description: "Developed and deployed intelligent applications, integrating AI for automation, personalization, and adaptive learning in EdTech.",
     icon: FaDiagramProject,
   },
   {
     id: 3,
     value: "99%",
-    title: "Optimized Code & Performance",
+    title: "Code Quality",
     description: "Writing clean, efficient, and scalable code with a focus on best practices, performance optimizations, and maintainability.",
     icon: SiGoogleanalytics,
   },
@@ -303,7 +303,7 @@ export const metrics = [
   {
     id: 5,
     value: "300+",
-    title: "Hours of Continuous Learning",
+    title: "Continuous Learning",
     description: "Dedicated to mastering emerging technologies, from full-stack development to AI-enhanced automation and SaaS innovations.",
     icon: FaRocket,
   },
@@ -317,7 +317,7 @@ export const metrics = [
   {
     id: 7,
     value: "2X",
-    title: "AI & Performance Enhancements",
+    title: "SEO & Performance",
     description: "Implemented AI-driven automation and data-driven optimizations, reducing load times, improving UX, and increasing efficiency.",
     icon: SiPagespeedinsights,
   },

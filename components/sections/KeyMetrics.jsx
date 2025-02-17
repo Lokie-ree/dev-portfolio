@@ -28,7 +28,7 @@ const KeyMetrics = () => {
                     <span className="text-base sm:text-2xl font-extrabold text-accent">{metric.value}</span>
                   </div>
                   <div className="collapse-content">
-                    <p className="text-sm sm:text-base font-thin">{metric.description}</p>
+                    <p className="text-xs sm:text-base font-thin">{metric.description}</p>
                   </div>
                 </div>
               </FadeIn>
