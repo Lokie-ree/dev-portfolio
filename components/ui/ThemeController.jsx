@@ -1,24 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
+import { useTheme } from "@/contexts/ThemeContext";
 import { themes } from "@/utils/constants";
 
 const ThemeController = () => {
-  const [theme, setTheme] = useState(themes.dark);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || themes.dark;
-    setTheme(savedTheme);
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === themes.dark ? themes.light : themes.dark;
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <label className="swap swap-rotate">

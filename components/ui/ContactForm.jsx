@@ -42,13 +42,13 @@ const ContactForm = () => {
   return (
     <div className="card p-6 rounded-xl shadow-md bg-gradient-to-br from-white/10 to-transparent">
       <Toaster />
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
         <FadeIn>
           <h3 className="text-3xl font-bold text-center">Get in Touch</h3>
         </FadeIn>
         <label
           htmlFor="name"
-          className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
+          className="input input-bordered w-full rounded-xl flex items-center gap-2 input-hover"
         >
           <MdOutlinePerson />
           <input
@@ -63,7 +63,7 @@ const ContactForm = () => {
 
         <label
           htmlFor="email"
-          className="input input-bordered rounded-xl flex items-center gap-2 input-hover"
+          className="input input-bordered w-full rounded-xl flex items-center gap-2 input-hover"
         >
           <MdOutlineEmail />
           <input

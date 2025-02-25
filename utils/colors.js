@@ -14,4 +14,5 @@ export const ICON_COLORS = {
   Vercel: "#000000",
   FramerMotion: "#0055FF",
   Supabase: "#3ECF8E",
+  Clerk: "#FFFFFF"
 };

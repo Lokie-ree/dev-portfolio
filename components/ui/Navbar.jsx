@@ -25,9 +25,13 @@ const Navbar = () => {
 
         {/* Right: Theme Controller and Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
+          {/* 
           <div className="hidden md:block">
             <ThemeController />
           </div>
+          
+          */}
+          
           {/* Mobile Menu Toggle */}
           <button
             onClick={toggleNav}

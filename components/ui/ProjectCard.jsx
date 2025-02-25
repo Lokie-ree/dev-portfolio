@@ -40,7 +40,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
                 {project.techStack.map((tech, index) => (
                   <tech.icon
                     key={index}
-                    className="w-5 h-5 sm:w-6 sm:h-6"
+                    className="w-3 h-3 sm:w-6 sm:h-6"
                     style={{ color: tech.color }}
                   />
                 ))}

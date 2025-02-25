@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { playfairDisplay, inter } from "@/utils/fonts";
 import { themes } from "@/utils/constants";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const websiteURL = "https://randalllapointjr.com";
 
@@ -50,11 +51,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${playfairDisplay.className} ${inter.className} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Analytics />
-        <SpeedInsights />
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Analytics />
+          <SpeedInsights />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

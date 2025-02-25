@@ -31,12 +31,11 @@ const ContactSection = () => {
                   <div className="flex items-center gap-3">
                     <MdEmail className="text-secondary text-xl" />
                     <div>
-                      <p className="font-medium">Email</p>
                       <a
                         href="mailto:randall.lapoint.jr@gmail.com"
                         className="font-light hover:text-primary transition-colors"
                       >
-                        rlapointjr@gmail.com
+                        Contact Me
                       </a>
                     </div>
                   </div>
@@ -44,7 +43,6 @@ const ContactSection = () => {
                   <div className="flex items-center gap-3">
                     <MdLocationOn className="text-secondary text-xl" />
                     <div>
-                      <p className="font-medium">Location</p>
                       <p className="font-light">Baton Rouge, LA</p>
                     </div>
                   </div>
@@ -52,7 +50,6 @@ const ContactSection = () => {
                   <div className="flex items-center gap-3">
                     <FaCode className="text-secondary text-xl" />
                     <div>
-                      <p className="font-medium">Availability</p>
                       <p className="font-light">Open to Opportunities</p>
                     </div>
                   </div>

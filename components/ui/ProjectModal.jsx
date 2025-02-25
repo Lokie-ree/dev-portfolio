@@ -6,7 +6,7 @@ import Link from "next/link";
 const ProjectModal = ({ project, onClose }) => {
   return (
     <div
-      className="modal modal-bottom sm:modal-middle modal-open flex items-end justify-center bg-black/50"
+      className="modal modal-bottom sm:modal-middle modal-open flex items-end justify-center bg-black/70"
       onClick={onClose}
     >
       <div className="w-full max-w-lg mx-auto px-4">
@@ -18,13 +18,13 @@ const ProjectModal = ({ project, onClose }) => {
             <MdClose />
           </button>
           <h3 className="heading-3 font-bold">{project.title}</h3>
-          <p className="py-4 font-thin">{project.description}</p>
+          <p className="py-4 font-thin text-sm">{project.description}</p>
 
           <div className="flex gap-4 mt-2">
             {project.techStack.map((tech, index) => (
               <tech.icon
                 key={index}
-                className="w-5 h-5"
+                className="w-4 h-4 sm:w-6 sm:h-6"
                 style={{ color: tech.color }}
               />
             ))}

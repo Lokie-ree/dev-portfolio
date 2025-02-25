@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SocialButtons from "./SocialButtons";
-import ThemeController from "./ThemeController";
+// import ThemeController from "./ThemeController";
 import { mobileLinks, socialButtons } from "@/utils/constants";
 
 const MobileMenu = ({ isOpen, closeMenu }) => {
@@ -33,7 +33,8 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
       {/* Social Buttons and Theme Controller */}
       <div className="mt-10 flex flex-col items-center space-y-4">
         <SocialButtons buttons={socialButtons} iconClass="w-8 h-8" />
-        <ThemeController />
+        {/* <ThemeController /> */}
+        
       </div>
     </motion.div>
   );

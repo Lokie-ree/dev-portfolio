@@ -26,6 +26,8 @@ import {
   SiStripe,
   SiGoogleanalytics,
   SiPagespeedinsights,
+  SiShadcnui,
+  SiClerk,
 } from "react-icons/si";
 import {
   TbBrandThreejs,
@@ -65,6 +67,45 @@ export const footerLinks = [
 export const projects = [
   {
     id: 1,
+    title: "LearnHive LMS",
+    description: "The Modern LMS Platform is a streamlined learning management system that enables educators to create, enroll in, and sell courses with ease. Designed for scalability, it provides a simple yet powerful framework for managing digital courses, with future enhancements planned to introduce AI-powered tools, interactive learning experiences, and advanced integrations.",
+    image: "/assets/learnhive-lms.png",
+    link: "https://lms-platform-new.vercel.app/",
+    code: "https://github.com/Lokie-ree/lms-platform-new",
+    techStack: [
+      { name: "Next.js", icon: RiNextjsLine, color: ICON_COLORS.Next },
+      { name: "React", icon: FaReact, color: ICON_COLORS.React },
+      {
+        name: "Tailwind",
+        icon: RiTailwindCssFill,
+        color: ICON_COLORS.Tailwind,
+      },
+      {
+        name: "Stripe",
+        icon: SiStripe,
+        color: ICON_COLORS.Stripe,
+      },
+      {
+        name: "Clerk",
+        icon: SiClerk,
+        color: ICON_COLORS.Clerk,
+      },
+      {
+        name: "Sanity",
+        icon: SiSanity,
+        color: ICON_COLORS.Sanity,
+      },
+      {
+        name: "ShadCn",
+        icon: SiShadcnui,
+        color: ICON_COLORS.Shadcn,
+      },
+      { name: "Vercel", icon: SiVercel, color: ICON_COLORS.Vercel },
+    ],
+  },
+
+  {
+    id: 2,
     title: "Personal Portfolio",
     description:
       "A modern developer portfolio built with Next.js 15, React, Tailwind CSS, DaisyUI, and Framer Motion. Showcases projects and skills with sleek animations and a responsive design.",
@@ -89,7 +130,7 @@ export const projects = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "E-Commerce",
     description:
       "A feature-rich e-commerce platform with dynamic cart functionality, product listing, and detail pages powered by Sanity CMS. Integrated with Stripe for secure and seamless payment processing.",
@@ -111,7 +152,7 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Kittenz",
     description:
       "A fun and interactive web app that fetches random kitten photos from the CatAPI. Includes a dynamic matching game to test your memory and love for kittens.",
@@ -131,7 +172,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "YC Directory",
     description:
       "A robust directory app allowing entrepreneurs to search for and explore popular startups. Includes features for user profile creation, startup submissions, and content management powered by Sanity CMS.",
@@ -156,7 +197,7 @@ export const projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "iPhone 15 Clone",
     description:
       "A visually stunning clone of the iPhone 15 website using GSAP and Three.js for interactive 3D animations and graphics, delivering a sleek and immersive user experience.",
