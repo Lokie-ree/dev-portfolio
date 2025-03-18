@@ -1,11 +1,8 @@
-import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { playfairDisplay, inter } from "@/utils/fonts";
-import { themes } from "@/utils/constants";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import "./globals.css";
 
 const websiteURL = "https://randalllapointjr.com";
 
@@ -54,8 +51,6 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <Navbar />
           {children}
-          <Analytics />
-          <SpeedInsights />
           <Footer />
         </ThemeProvider>
       </body>
