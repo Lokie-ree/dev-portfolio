@@ -1,8 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Randall LaPoint Jr. - Developer Portfolio
+
+A modern, responsive developer portfolio built with Next.js 15, React, Tailwind CSS, DaisyUI, and Framer Motion. This portfolio showcases projects, skills, and provides contact information.
+
+## Features
+
+- Modern and responsive design
+- Smooth animations with Framer Motion
+- Project carousel showcasing multiple projects
+- TechStack section highlighting skills and technologies
+- Contact form with EmailJS integration
+- SEO optimized with meta tags and sitemap
+- Mobile-friendly interface
+- Performance optimized with Vercel analytics and speed insights
+
+## Technologies Used
+
+- **Frontend Framework**: Next.js 15 with App Router
+- **UI Library**: React 18
+- **Styling**: Tailwind CSS 4, DaisyUI
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Deployment**: Vercel
+- **Analytics**: Vercel Analytics & Speed Insights
+- **Contact Form**: EmailJS
+- **Notifications**: React Hot Toast
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +45,31 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/` - Next.js app router pages and layouts
+- `components/` - Reusable React components
+  - `animations/` - Animation components using Framer Motion
+  - `layout/` - Layout components like Container, Section, etc.
+  - `sections/` - Main page sections (Hero, Projects, TechStack, etc.)
+  - `ui/` - UI components like cards, buttons, etc.
+- `contexts/` - React context providers
+- `hooks/` - Custom React hooks
+- `public/` - Static assets
+- `utils/` - Utility functions and constants
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The site is deployed on Vercel. Each commit to the main branch triggers a new deployment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Live Demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can see the live site at [https://randalllapointjr.com](https://randalllapointjr.com)
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to reach out through the contact form on the website or connect directly through the provided social links.
